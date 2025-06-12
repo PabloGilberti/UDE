@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1749577220 source:/home/pgilberti/Documentos/UDE/PROGRAMACION/Strings/main.cpp
+	<iostream>
+	<stdio.h>
+
