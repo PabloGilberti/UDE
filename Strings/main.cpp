@@ -27,6 +27,7 @@ int main()
         }
 
         printf("La letra %c se encuentra %d veces en el string.",letra,cont);
+        printf("");
 
 
 
