@@ -18,6 +18,7 @@ int main()
         printf("Ingrese un caracter a buscar en el string: ");
         scanf("%c",&letra);
 
+        
         while(cadena[i]!='\0'){
 
             if (cadena[i]==letra){
