@@ -32,7 +32,7 @@ int main()
     i=0;
     printf("\nIngrese el universo MARVEL o DC: ");
     fflush(stdin);
-    scanf ("\n%c", &letra);
+    scanf ("%c", &letra);
     while (letra != '\n' && i < MAX-1){
                universo[i]=letra;
                i++;
@@ -83,7 +83,7 @@ int main()
     }
 
     for (i = 0; i < MAX_HEROES; i++) {
-        printf("\nSuperheroe %d: %s ", i + 1, nombreHeroes[i]);
+        printf("\nSuperheroe %d: %c ", i , nombreHeroes[i]);
 
     }
 
