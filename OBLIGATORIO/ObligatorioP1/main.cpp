@@ -8,6 +8,7 @@ const int MAX_PODERES=4;
 typedef  char superHeroes[MAX_HEROES];
 typedef  char superPoderes[MAX_PODERES];
 typedef  char String[MAX];
+typedef enum {FALSE,TRUE} boolean;
 
 int main()
 {
@@ -17,6 +18,7 @@ int main()
     char letra;
     int i=0,j=0,k=0;
     superHeroes nombreHeroes[MAX_HEROES];
+    boolean esMarvel, esDC;
 //CARGAR JUGADOR
     printf("\nIngrese su nombre: ");
     fflush(stdin);
@@ -39,6 +41,36 @@ int main()
                scanf ("%c", &letra);
     }
     universo[i]='\0';
+//verificar que se ingreso el universo correcto.
+    esMarvel=FALSE;
+    esDC=FALSE;
+
+         if(i == 6 &&
+        (universo[0] == 'M' || universo[0] == 'm') &&
+        (universo[1] == 'A' || universo[1] == 'a') &&
+        (universo[2] == 'R' || universo[2] == 'r') &&
+        (universo[3] == 'V' || universo[3] == 'v') &&
+        (universo[4] == 'E' || universo[4] == 'e') &&
+        (universo[5] == 'L' || universo[5] == 'l')){
+
+        esMarvel=TRUE;
+
+        }
+
+        if(i == 2 &&
+        (universo[0] == 'D' || universo[0] == 'd') &&
+        (universo[1] == 'C' || universo[1] == 'c')){
+            esDC=TRUE;
+        }
+
+    if (esMarvel) {
+        printf("El universo es MARVEL\n");
+    } else if (esDC) {
+        printf("El universo es DC\n");
+    } else {
+        printf("Universo no reconocido\n");
+        return 0;
+    }
 
 //CARGAR EL SUPER HEROE
 
