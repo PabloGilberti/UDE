@@ -44,24 +44,23 @@ int main()
 
 
 
-    for (j=0;j<MAX_HEROES;j++){
-        printf("\nIngrese el nombre del Super Heroe: ");
-        i=0;
+    for (i=0;i<MAX_HEROES;i++){
+        printf("Ingrese nombre del superhéroe %d (ENTER para finalizar): ", i + 1);
+        j=0;
         do{
-
             scanf ("%c", &letra);
             if(letra != '\n' ){
-               heroe[i]=letra;
-               i++;
+               nombreHeroes[i][j]=letra;
+               j++;
             }
-        }while (letra != '\n' && i < MAX-1);
-        universo[i]='\0';
-        k=0;
-        while (heroe[k] != '\0') {
-            nombreHeroes[j][k] = heroe[k];
-            k++;
-        }
-        nombreHeroes[j][k] = '\0';
+        }while (letra != '\n' && j < MAX-1);
+        nombreHeroes[i][j]='\0';
+        //k=0;
+        //while (heroe[k] != '\0') {
+          //  nombreHeroes[j][k] = heroe[k];
+            //k++;
+        //}
+       // nombreHeroes[j][k] = '\0';
 
     }
 
@@ -82,11 +81,18 @@ int main()
            i++;
     }
 
-    for (i = 0; i < MAX_HEROES; i++) {
-        printf("\nSuperheroe %d: %c ", i , nombreHeroes[i]);
+  printf("Superhéroes:\n");
+for (i = 0; i < MAX_H
 
+EROES; i++) {
+    printf("  [%d] ", i);
+    j = 0;
+    while (nombreHeroes[i][j] != '\0') {
+        printf("%c", nombreHeroes[i][j]);
+        j++;
     }
-
+    printf("\n");
+}
 
     /*scanf("\n%c",&nombre);
 
