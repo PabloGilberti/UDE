@@ -81,10 +81,8 @@ int main()
            i++;
     }
 
-  printf("Superhéroes:\n");
-for (i = 0; i < MAX_H
-
-EROES; i++) {
+  printf("\nSuperhéroes:\n");
+for (i = 0; i < MAX_HEROES; i++) {
     printf("  [%d] ", i);
     j = 0;
     while (nombreHeroes[i][j] != '\0') {
