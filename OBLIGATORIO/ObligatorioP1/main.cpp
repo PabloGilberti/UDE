@@ -4,12 +4,13 @@ using namespace std;
 const char MAX=40;
 const int MAX_HEROES=5;
 const int MAX_PODERES=4;
-
-typedef  char superHeroes[MAX_HEROES];
-typedef  char superPoderes[MAX_PODERES];
 typedef  char String[MAX];
+
+typedef  String superHeroes[MAX_HEROES];
+typedef  String superPoderes[MAX_PODERES];
 typedef enum {FALSE,TRUE} boolean;
 typedef int Matriz[MAX_HEROES][MAX_PODERES];
+
 
 int main()
 {
@@ -18,10 +19,11 @@ int main()
     String heroe,nombre,universo,poder;
     char letra;
     int i=0,j=0,k=0;
-    superHeroes nombreHeroes[MAX];
-    superPoderes descPoderes[MAX];
+    superHeroes nombreHeroes;
+    superPoderes descPoderes;
     boolean esMarvel, esDC;
-    Matriz opinionUser;
+    Matriz opinionUser,matrizRandom;
+
 
 /************************************************************************************
 **************************  CARGAR NOMBRE JUGADOR  **********************************
@@ -29,7 +31,7 @@ int main()
 
     printf("\nIngrese su nombre: ");
     fflush(stdin);
-    scanf ("\n%c", &letra);
+    scanf ("%c", &letra);
     while (letra != '\n' && i < MAX-1){
                nombre[i]=letra;
                i++;
@@ -88,31 +90,28 @@ int main()
     for (i=0;i<MAX_HEROES;i++){
         printf("Ingrese nombre del superhéroe %d (ENTER para finalizar): ", i + 1);
         j=0;
-        fflush(stdin);
-        do{
 
-            scanf ("%c",&letra);
+        do{
+            scanf("%c",&letra);
             if(letra != '\n' ){
                nombreHeroes[i][j]=letra;
-               j++;            }
-
+               j++;
+               }
         }while (letra != '\n' && j < MAX-1);
         nombreHeroes[i][j]='\0';
 
     }
-     printf("Superhéroes:\n");
-    for (i = 0; i < MAX_HEROES; i++) {
-        fflush(stdin);
-        printf("[%d]", i);
+
+    printf("\nSuperhéroes:\n");
+    for (i = 0; i <= MAX_HEROES; i++) {
+        printf("  [%d] ", i);
         j = 0;
         while (nombreHeroes[i][j] != '\0') {
-            fflush(stdin);
-            printf("%c", nombreHeroes[i][j]);
+        printf("%c", nombreHeroes[i][j]);
             j++;
         }
     printf("\n");
     }
-
 
 
 /************************************************************************************
@@ -181,6 +180,123 @@ int main()
         }
     }
 }
+
+
+/************************************************************************************
+********************************  MATRIZ RANDOM  ************************************
+************************************************************************************/
+
+for (i = 0; i < MAX_HEROES; i++) {
+    for (j = 0; j < MAX_PODERES; j++) {
+        matrizRandom[i][j] = rand() % 6;
+    }
+}
+
+
+
+//calculos
+
+int matrizPuntos[MAX_HEROES][MAX_PODERES];
+int sumaUsuario[MAX_HEROES];
+int sumaPublico[MAX_HEROES];
+int puntosTotalesUsuario = 0;
+
+
+
+
+// Inicializar sumas
+for (i = 0; i < MAX_HEROES; i++) {
+    sumaUsuario[i] = 0;
+    sumaPublico[i] = 0;
+}
+
+// Calcular sumas por fila
+for (i = 0; i < MAX_HEROES; i++) {
+    for (j = 0; j < MAX_PODERES; j++) {
+        sumaUsuario[i] += opinionUser[i][j];
+        sumaPublico[i] += matrizRandom[i][j];
+    }
+}
+
+// Calcular puntos comparando celda por celda
+for (i = 0; i < MAX_HEROES; i++) {
+    for (j = 0; j < MAX_PODERES; j++) {
+        if (opinionUser[i][j] == matrizRandom[i][j]) {
+            matrizPuntos[i][j] = 2;
+        } else if (sumaUsuario[i] == sumaPublico[i]) {
+            matrizPuntos[i][j] = 1;
+        } else {
+            matrizPuntos[i][j] = 0;
+        }
+
+        puntosTotalesUsuario += matrizPuntos[i][j];
+    }
+}
+
+
+
+
+//LISTADO
+
+// Encabezado
+printf("\n************************************************************\n");
+printf(" Competición superhéroes ");
+i = 0;
+while (universo[i] != '\0') {
+    printf("%c", universo[i]);
+    i++;
+}
+printf(" – UDE - 2025\n");
+printf("************************************************************\n");
+
+printf("\nApuesta de ");
+i = 0;
+while (nombre[i] != '\0') {
+    printf("%c", nombre[i]);
+    i++;
+}
+printf("\n=============================================\n\n");
+
+printf("SUPERHEROE - SUPERPODER – OPINION USUARIO – OPINION PUBLICO - PUNTOS\n\n");
+
+for (i = 0; i < MAX_HEROES; i++) {
+    int puntosPorHeroe = 0;
+
+    for (j = 0; j < MAX_PODERES; j++) {
+
+        // Imprimir nombre del superhéroe
+        for (int k = 0; nombreHeroes[i][k] != '\0'; k++) {
+            printf("%c", nombreHeroes[i][k]);
+        }
+
+        printf(" - ");
+
+        // Imprimir nombre del superpoder
+        for (int k = 0; descPoderes[j][k] != '\0'; k++) {
+            printf("%c", descPoderes[j][k]);
+        }
+
+        printf(" - %d - %d - %d\n", opinionUser[i][j], matrizRandom[i][j], matrizPuntos[i][j]);
+
+        puntosPorHeroe += matrizPuntos[i][j];
+    }
+
+    printf("Total puntos ");
+    for (int k = 0; nombreHeroes[i][k] != '\0'; k++) {
+        printf("%c", nombreHeroes[i][k]);
+    }
+
+    printf(": %d (usuario), %d (publico), %d (aciertos)\n\n",
+           sumaUsuario[i], sumaPublico[i], puntosPorHeroe);
+}
+
+printf("TOTAL GENERAL DE PUNTOS OBTENIDOS POR ");
+i = 0;
+while (nombre[i] != '\0') {
+    printf("%c", nombre[i]);
+    i++;
+}
+printf(": %d\n", puntosTotalesUsuario);
 
 /************************************************************************************
 **********************  VERIFICACIONES DE LO CARGADO  *******************************
