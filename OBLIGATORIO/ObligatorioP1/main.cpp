@@ -16,13 +16,16 @@ int main()
 {
 
 
-    String heroe,nombre,universo,poder;
+    String nombre,universo;
     char letra;
     int i=0,j=0,k=0;
     superHeroes nombreHeroes;
     superPoderes descPoderes;
     boolean esMarvel, esDC;
-    Matriz opinionUser,matrizRandom;
+    Matriz opinionUser,matrizRandom, matrizPuntos;
+    int sumaUsuario[MAX_HEROES];
+    int sumaPublico[MAX_HEROES];
+    int puntosTotalesUsuario = 0;
 
 
 /************************************************************************************
@@ -102,16 +105,6 @@ int main()
 
     }
 
-    printf("\nSuperhéroes:\n");
-    for (i = 0; i <= MAX_HEROES; i++) {
-        printf("  [%d] ", i);
-        j = 0;
-        while (nombreHeroes[i][j] != '\0') {
-        printf("%c", nombreHeroes[i][j]);
-            j++;
-        }
-    printf("\n");
-    }
 
 
 /************************************************************************************
@@ -133,16 +126,6 @@ int main()
     }
        printf("Super Poderes:\n");
 
-    for (i = 0; i < MAX_PODERES; i++) {
-        printf("  [%d]", i);
-        j = 0;
-        fflush(stdin);
-        while (descPoderes[i][j] != '\0') {
-            printf("%c", descPoderes[i][j]);
-            j++;
-        }
-    printf("\n");
-    }
 /************************************************************************************
 ******************************  CARGAR LA JUGADA  ***********************************
 ************************************************************************************/
@@ -196,10 +179,6 @@ for (i = 0; i < MAX_HEROES; i++) {
 
 //calculos
 
-int matrizPuntos[MAX_HEROES][MAX_PODERES];
-int sumaUsuario[MAX_HEROES];
-int sumaPublico[MAX_HEROES];
-int puntosTotalesUsuario = 0;
 
 
 
@@ -300,7 +279,7 @@ printf(": %d\n", puntosTotalesUsuario);
 
 /************************************************************************************
 **********************  VERIFICACIONES DE LO CARGADO  *******************************
-************************************************************************************/
+************************************************************************************
 
 //USUARIO
     i = 0;
@@ -342,5 +321,5 @@ printf(": %d\n", puntosTotalesUsuario);
         }
     printf("\n");
     }
-
+*/
 }
