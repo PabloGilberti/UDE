@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+
 using namespace std;
 const char MAX=40;
 const int MAX_HEROES=5;
@@ -10,6 +11,7 @@ typedef  String superHeroes[MAX_HEROES];
 typedef  String superPoderes[MAX_PODERES];
 typedef enum {FALSE,TRUE} boolean;
 typedef int Matriz[MAX_HEROES][MAX_PODERES];
+typedef int sumas[MAX_HEROES];
 
 
 int main()
@@ -23,8 +25,7 @@ int main()
     superPoderes descPoderes;
     boolean esMarvel, esDC;
     Matriz opinionUser,matrizRandom, matrizPuntos;
-    int sumaUsuario[MAX_HEROES];
-    int sumaPublico[MAX_HEROES];
+    sumas sumaUsuario,sumaPublico;
     int puntosPorHeroe = 0;
     int puntosTotalesUsuario = 0;
 
@@ -172,7 +173,7 @@ int main()
 
 for (i = 0; i < MAX_HEROES; i++) {
     for (j = 0; j < MAX_PODERES; j++) {
-        matrizRandom[i][j] = rand() % 6;
+        matrizRandom[i][j] = (rand() % 6);
     }
 }
 
