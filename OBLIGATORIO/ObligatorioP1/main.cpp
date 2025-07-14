@@ -189,8 +189,10 @@ for (i = 0; i < MAX_HEROES; i++) {
 // Calcular sumas por fila
 for (i = 0; i < MAX_HEROES; i++) {
     for (j = 0; j < MAX_PODERES; j++) {
+
         sumaUsuario[i] += opinionUser[i][j];
         sumaPublico[i] += matrizRandom[i][j];
+
     }
 }
 
@@ -236,7 +238,7 @@ while (nombre[i] != '\0') {
 printf("\n");
 printf("=============================================\n\n");
 
-printf("SUPERHEROE - SUPERPODER – OPINION USUARIO – OPINION PUBLICO - PUNTOS\n\n");
+printf("SUPERHEROE - SUPERPODER - OPINION USUARIO - OPINION PUBLICO - PUNTOS\n\n");
 
 for (i = 0; i < MAX_HEROES; i++) {
      puntosPorHeroe = 0;
@@ -261,14 +263,14 @@ for (i = 0; i < MAX_HEROES; i++) {
         puntosPorHeroe += matrizPuntos[i][j];
     }
 
-    // Línea resumen de totales por superhéroe
+    // Línea  totales por superhéroe
     printf("Total puntos ");
     for (int k = 0; nombreHeroes[i][k] != '\0'; k++) {
         printf("%c", nombreHeroes[i][k]);
     }
     printf(" - %d - %d - %d\n", sumaUsuario[i], sumaPublico[i], puntosPorHeroe);
 
-    // Línea con nombre del usuario
+    // Línea  nombre del usuario
     printf("Total puntos de ");
     for (int k = 0; nombre[k] != '\0'; k++) {
         printf("%c", nombre[k]);
