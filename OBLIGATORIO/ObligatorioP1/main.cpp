@@ -115,7 +115,7 @@ int main()
 ************************************************************************************/
 
     for (i=0;i<MAX_PODERES;i++){
-        printf("Ingrese 4 Super poderes d (ENTER para finalizar): ", i + 1);
+        printf("Ingrese 4 Super poderes %d (ENTER para finalizar): ", i + 1);
         j=0;
         fflush(stdin);
         do{
