@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+#include <stdio.h>
 
 using namespace std;
 const char MAX=40;
@@ -58,7 +59,7 @@ int main()
                scanf ("%c", &letra);
     }
     universo[i]='\0';
-//verificar que se ingreso el universo correcto.
+//verificar  el universo correcto.
     esMarvel=FALSE;
     esDC=FALSE;
 
