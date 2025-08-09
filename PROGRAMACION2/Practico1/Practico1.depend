@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1754610323 source:/home/pgilberti/Documentos/UDE/PROGRAMACION/PROGRAMACION2/Practico1/main.cpp
+	<iostream>
+	<stdio.h>
+
