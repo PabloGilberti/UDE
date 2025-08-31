@@ -1,5 +1,37 @@
 # depslib dependency file v1.0
+<<<<<<< HEAD
 1755218913 source:c:\users\pablo\documents\ude\programacion2\practico2ejer1\main.cpp
 	<iostream>
 	<stdio.h>
 
+=======
+1755562713 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico2ejer1\main.cpp
+	<iostream>
+	<stdio.h>
+
+1756427814 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico2ejer1\string.cpp
+	<stdio.h>
+	"string.h"
+
+1756427907 c:\users\pablo gilberti\documents\ude\ude\programacion2\practico2ejer1\string.h
+	"booleano.h"
+	"arreglo.h"
+
+1756427094 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico2ejer1\arreglo.cpp
+	<stdio.h>
+	"arreglo.h"
+
+1756427137 c:\users\pablo gilberti\documents\ude\ude\programacion2\practico2ejer1\arreglo.h
+	"booleano.h"
+
+1756427814 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico2ejer1\booleano.cpp
+	"booleano.h"
+
+1756427845 c:\users\pablo gilberti\documents\ude\ude\programacion2\practico2ejer1\booleano.h
+
+1756427094 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico2ejer1\entero.cpp
+	"entero.h"
+
+1756427094 c:\users\pablo gilberti\documents\ude\ude\programacion2\practico2ejer1\entero.h
+
+>>>>>>> 707e5050420de1d35f308f590486cd0eef0d8fb0
