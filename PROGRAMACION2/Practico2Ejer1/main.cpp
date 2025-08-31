@@ -1,210 +1,29 @@
+
+
+
+
 #include <iostream>
 #include <stdio.h>
-const int MAX=6;
-typedef int arreglo[MAX];
-typedef enum {FALSE,TRUE} booleano;
-const int TAM = 80;
-typedef char String[TAM];
+#include "string.h"
+#include "entero.h"
+//const int MAX=6;
 
-void imprimirArreglo(arreglo arr){
 
 
-    for(int i = 0;i<MAX;i++){
 
-        printf("\nEl valor en la posicion %d del arreglo es: %d",i,arr[i]);
 
-    }
-}
-void cargarArreglo(arreglo &arr){
-    int numero;
 
-   // printf("Favor cargar valores:");
-  //  scanf("%d",&numero);
 
-    for(int i=0;i<MAX;i++){
-        printf("\nFavor cargar valores:");
-        scanf("%d",&numero);
-        arr[i]=numero;
-    }
 
-}
-booleano existe(arreglo arre, int numero){
 
-    booleano existe=FALSE;
-    int i=0;
-    while(!existe && i < MAX){
 
-        if(arre[i]== numero){
 
-            existe=TRUE;
-        }else{
-            i++;
-        }
 
-    }
 
-    return existe;
 
-}
-void suma_producto(arreglo arre, int &suma,int &producto){
 
-    for (int i=0;i<MAX;i++){
 
-        suma = suma+arre[i];
-        producto = producto * arre[i];
 
-    }
-
-
-
-
-}
-int retMultiplos(arreglo arre, int numero){
-
-    int contador=0;
-
-    for(int i=0; i<MAX;i++){
-
-        if(arre[i]%numero==0){
-            contador++;
-
-        }
-    }
-        return contador;
-
-
-
-
-
-}
-void invertirArray(arreglo &arr){
-
-    int aux=0,j;
-
-    for(int i=0;i<MAX/2;i++){
-
-        aux=arr[MAX-1-i];
-        arr[MAX-1-i]=arr[i];
-        arr[i]=aux;
-
-    }
-    printf("Imprimir el arreglo ");
-    imprimirArreglo(arr);
-
-
-
-
-
-
-}
-void suap(int &num1, int &num2){
-    int aux;
-    aux=num1;
-    num1=num2;
-    num2=aux;
-}
-int strlar(String arr){
-    int i=0;
-
-    while(arr[i]!='\0'){
-
-        i++;
-    }
-        return i;
-}
-void cargarArregloString(String &arr){
-
-    int i=0;
-    char c;
-    printf("\nCargar su String[ENTER para terminar]");
-    scanf("%c",&c);
-    while (c!='\n' && i<TAM-1){
-        arr[i]=c;
-        scanf("%c",&c);
-        i++;
-    }
-    arr[i]='\0';
-}
-void imprimirArrString(String arre){
-    int i=0;
-
-    while(arre[i]!='\0'){
-        printf("%c",arre[i]);
-        i++;
-    }
-}
-booleano strmen(String arre1,String arre2){
-    int i=0;
-    booleano menor = TRUE;
-
-    while(arre1[i]!='\0' && arre2[i]!='\0' && menor==TRUE){
-        if(arre1[i]>arre2[i]){
-            menor=FALSE;
-        }
-        i++;
-    }
-    if (arre1[i]!='\0' && arre2[i]=='\0'&& menor==TRUE){
-
-        menor=FALSE;
-
-    }
-
-    return menor;
-
-
-
-
-}
-booleano streq(String arre1,String arre2){
-    int i=0;
-    booleano igual = TRUE;
-
-    while(arre1[i]!='\0' && arre2[i]!='\0' && igual==TRUE){
-        if(arre1[i]!=arre2[i]){
-            igual=FALSE;
-        }
-        i++;
-    }
-    if (((arre1[i]!='\0' && arre2[i] =='\0')||(arre2[i]!='\0' && arre1[i] =='\0'))&& igual==TRUE){
-        igual=FALSE;
-    }
-
-    return igual;
-
-
-
-
-}
-void strcop (String &arre1,String arre2){
-    int i=0;
-    while (arre2[i]!='\0'){
-        arre1[i]=arre2[i];
-        i++;
-    }
-    arre1[i]='\0';
-}
-void strcon(String &arre1,String arre2){
-
-
-int i=strlar(arre1);
-printf("\nmel indice es:%d",i);
-int j = 0;
-
-    while (arre2[j]!='\0' && i < MAX-1){
-
-        arre1[i]=arre2[j];
-            i++;
-            j++;
-
-    }
-    arre1[i]='\0';
-
-
-
-
-
-
-}
 
 int main()
 
@@ -231,20 +50,20 @@ int main()
 
 
         //Devolver la suma y el producto de todos los valores del arreglo.
-        int suma=0, producto=1;
-        suma_producto(arre,suma,producto);
+       // int suma=0, producto=1;
+       // suma_producto(arre,suma,producto);
 
-        printf("\nEl valor de la suma es:%d y el valor del producto es: %d",suma, producto);
+//        printf("\nEl valor de la suma es:%d y el valor del producto es: %d",suma, producto);
 
         //Dado un entero m, contar cuántos múltiplos de m hay en el arreglo.
         //int retorno=retMultiplos(arre,3);
 
-        printf("\nElresultado de cantidad de multiplos es:%d",retMultiplos(arre,2));
+       // printf("\nElresultado de cantidad de multiplos es:%d",retMultiplos(arre,2));
 
 
         //Invertir el arreglo sobre sí mismo (intercambiar 1º con última celda, 2º con penúltima, etc.).
 
-    invertirArray(arre);
+//    invertirArray(arre);
 
 
  /*   Ejercicio 3
