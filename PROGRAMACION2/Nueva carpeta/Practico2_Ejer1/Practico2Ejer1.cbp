@@ -32,15 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="arreglo.cpp" />
-		<Unit filename="arreglo.h" />
-		<Unit filename="booleano.cpp" />
-		<Unit filename="booleano.h" />
-		<Unit filename="entero.cpp" />
-		<Unit filename="entero.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="string.cpp" />
-		<Unit filename="string.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

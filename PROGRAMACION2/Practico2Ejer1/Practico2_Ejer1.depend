@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1756825182 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico2ejer1\arreglo.cpp
+	<stdio.h>
+	"arreglo.h"
+
+1756825182 c:\users\pgilberti\documents\ude\ude\programacion2\practico2ejer1\arreglo.h
+	"booleano.h"
+
+1756825182 c:\users\pgilberti\documents\ude\ude\programacion2\practico2ejer1\booleano.h
+
+1756825182 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico2ejer1\booleano.cpp
+	"booleano.h"
+
+1756825182 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico2ejer1\entero.cpp
+	"entero.h"
+
+1756825182 c:\users\pgilberti\documents\ude\ude\programacion2\practico2ejer1\entero.h
+
+1756825182 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico2ejer1\string.cpp
+	<stdio.h>
+	"string.h"
+
+1757016957 c:\users\pgilberti\documents\ude\ude\programacion2\practico2ejer1\string.h
+

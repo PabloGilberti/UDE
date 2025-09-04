@@ -1,11 +1,26 @@
 # depslib dependency file v1.0
-1756838902 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico3\boolean.cpp
+1757022240 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico3\boolean.cpp
 	"boolean.h"
 
 1756838901 c:\users\pgilberti\documents\ude\ude\programacion2\practico3\boolean.h
 	<stdio.h>
 
-1756838954 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico3\main.cpp
+1757023232 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico3\main.cpp
 	<iostream>
+	"string.h"
+	"arreglo.h"
+
+1757017544 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico3\string.cpp
+	<stdio.h>
+	"string.h"
+
+1757017516 c:\users\pgilberti\documents\ude\ude\programacion2\practico3\string.h
+	"boolean.h"
+
+1757023591 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico3\arreglo.cpp
+	"arreglo.h"
+
+1757023756 c:\users\pgilberti\documents\ude\ude\programacion2\practico3\arreglo.h
+	<stdio.h>
 	"boolean.h"
 
