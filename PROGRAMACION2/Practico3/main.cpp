@@ -62,12 +62,21 @@ int main()
         · Devolver el primero y el último elemento del arreglo.
 
     */
+        booleano existe;
         arreglo arre;
-        int suma;
+        int suma,promedio;
         cargarArreglo(arre);
-        sumaElementos(arre, suma);
-        printf("la suma del array es: %d",suma);
+        suma=sumaElementos(arre);
+        printf("\nLa suma del array es: %d",suma);
+        promedio=promedioElementos(arre);
+        printf("\nEl promedio de la suma de los elementos es: %d",promedio);
+        imprimirArreglo(arre);
+        existe = searchElement(arre,10);
 
+        if(existe)
+            printf("Existe");
+        else
+            printf("No Existe");
 
 
 

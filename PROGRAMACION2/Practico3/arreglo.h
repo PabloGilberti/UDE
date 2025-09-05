@@ -8,8 +8,11 @@ typedef int arreglo [TAM];
 
 
 void cargarArreglo(arreglo &arr);
-void sumaElementos(arreglo arr,int &suma);
+int sumaElementos(arreglo arr);
+int promedioElementos(arreglo arr);
+booleano searchElement(arreglo arr,int element);
 void imprimirArreglo(arreglo arr);
+
 
 booleano existe(arreglo arre, int numero);
 

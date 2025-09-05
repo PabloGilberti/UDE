@@ -24,3 +24,23 @@
 	<stdio.h>
 	"boolean.h"
 
+1757024766 source:c:\users\pablo\documents\ude\programacion2\practico3\string.cpp
+	<stdio.h>
+	"string.h"
+
+1757024766 c:\users\pablo\documents\ude\programacion2\practico3\string.h
+	"boolean.h"
+
+1757024766 c:\users\pablo\documents\ude\programacion2\practico3\boolean.h
+	<stdio.h>
+
+1757028851 source:c:\users\pablo\documents\ude\programacion2\practico3\boolean.cpp
+	"boolean.h"
+
+1757030177 source:c:\users\pablo\documents\ude\programacion2\practico3\arreglo.cpp
+	"arreglo.h"
+
+1757030216 c:\users\pablo\documents\ude\programacion2\practico3\arreglo.h
+	<stdio.h>
+	"boolean.h"
+

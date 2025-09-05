@@ -16,8 +16,8 @@ void cargarArreglo(arreglo &arr){
 
 }
 
-void sumaElementos(arreglo arre, int &suma){
-
+int sumaElementos(arreglo arre){
+    int suma=0;
     for (int i=0;i<TAM;i++){
 
         suma = suma+arre[i];
@@ -27,8 +27,37 @@ void sumaElementos(arreglo arre, int &suma){
 
 
 
+    return suma;
+}
+
+int promedioElementos (arreglo arre){
+
+    int suma=0;
+    int i;
+    int promedio=0;
+    for (i=0;i<TAM;i++){
+            suma= suma+arre[i];
+
+
+    }
+    promedio = suma/i;
+    return promedio;
 
 }
+booleano searchElement(arreglo arre, int element){
+    booleano existe=FALSE;
+    for(int i=0;i<TAM;i++){
+
+            if(arre[i]==element){
+                existe=TRUE;
+
+            }
+    }
+
+        return existe;
+}
+
+
 
 
 void imprimirArreglo(arreglo arr){

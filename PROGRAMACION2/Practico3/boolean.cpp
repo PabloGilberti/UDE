@@ -1,9 +1,5 @@
 #include "boolean.h"
 
-
-
-
-
 void cargarBooleano(booleano &b){
 
     int valor;
@@ -16,8 +12,9 @@ void cargarBooleano(booleano &b){
         b = TRUE;
 
 
-
 }
+
+
 void desplegarBooleano(booleano b){
 
 
