@@ -30,6 +30,23 @@ int sumaElementos(arreglo arre){
     return suma;
 }
 
+int cantMultiplos(arreglo arr, int element){
+
+
+    int contador=0;
+
+    for(int i=0;i<TAM;i++){
+
+            if(arre[i]%element==0){
+                contador ++;
+
+            }
+    }
+
+        return existe;
+
+}
+
 int promedioElementos (arreglo arre){
 
     int suma=0;

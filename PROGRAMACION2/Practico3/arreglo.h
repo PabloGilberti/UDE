@@ -11,6 +11,7 @@ void cargarArreglo(arreglo &arr);
 int sumaElementos(arreglo arr);
 int promedioElementos(arreglo arr);
 booleano searchElement(arreglo arr,int element);
+int cantMultiplos(arreglo arr, int element);
 void imprimirArreglo(arreglo arr);
 
 
