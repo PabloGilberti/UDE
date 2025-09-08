@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1757354153 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\main.cpp
+	<iostream>
+	"fecha.h"
+
+1757356555 c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\fecha.h
+	<stdio.h>
+	"booleano.h"
+
+1757358371 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\fecha.cpp
+	"fecha.h"
+
+1757355266 c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\booleano.h
+
+1757360461 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\string.cpp
+
