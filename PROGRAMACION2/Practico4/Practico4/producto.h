@@ -7,9 +7,11 @@ typedef struct{String nombre;
                float precio;
                booleano en_stock;
                Fecha fecha_adquisicion;}Producto;
-//Selectoras
+
 void CargarProducto(Producto &p);
 void MostrarProducto(Producto p);
+
+//Selectoras
 long int DarNumero(Producto p);
 float    DarPrecio(Producto p);
 booleano DarEnStock(Producto p);

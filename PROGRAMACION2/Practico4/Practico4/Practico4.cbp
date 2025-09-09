@@ -32,10 +32,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="arreglo.cpp" />
+		<Unit filename="arreglo.h" />
+		<Unit filename="booleano.cpp" />
 		<Unit filename="booleano.h" />
 		<Unit filename="fecha.cpp" />
 		<Unit filename="fecha.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="producto.cpp" />
+		<Unit filename="producto.h" />
+		<Unit filename="string.cpp" />
+		<Unit filename="string.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

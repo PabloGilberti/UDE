@@ -1,7 +1,6 @@
 #include "string.h"
 
 void CargarString(String &s) {
-    //printf("%s", prompt);
     char c;
     int i = 0;
     scanf("%c",&c);
@@ -16,7 +15,7 @@ void CargarString(String &s) {
 
 void MostrarString(String s) {
     int i = 0;
-    while (s[i] != '\0') {   // recorremos carácter a carácter
+    while (s[i] != '\0') {
         printf("%c", s[i]);
         i++;
     }

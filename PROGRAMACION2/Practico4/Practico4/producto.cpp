@@ -1,32 +1,42 @@
 #include "producto.h"
+#include "booleano.h"
 
 
 
 void CargarProducto(Producto &p) {
 
-    printf("Nombre del producto: ");
-    scanf(" %80[^\n]", p.nombre);
-
-    printf("Número: ");
+    CargarString(p.nombre);
+   printf("Ingrese un nombre de producto: ");
+    CargarString(p.nombre);
+    printf("Numero (entero largo): ");
     scanf("%ld", &p.numero);
-
     printf("Precio: ");
     scanf("%f", &p.precio);
+    printf("Se encuentra en Stock?:\n");
+    CargarBooleano(p.en_stock);
+    printf("Fecha de adquisicion:\n");
+    CargarFecha(p.fecha_adquisicion);
 
-    int stockAux;
-    printf("¿Está en stock? (1=SI, 0=NO): ");
-    scanf("%d", &stockAux);
-    if (stockAux == 1)
-        p.en_stock = TRUE;
-    else
-        p.en_stock = FALSE;
-
-    printf("Fecha de adquisición\n");
-    printf("  Día: ");
-    scanf("%d", &p.fecha_adquisicion.dia);
-    printf("  Mes: ");
-    scanf("%d", &p.fecha_adquisicion.mes);
-    printf("  Año: ");
-    scanf("%d", &p.fecha_adquisicion.anio);
 }
 
+ void MostrarProducto(Producto p) {
+    printf("Producto:\n");
+    printf("  Nombre: ");  MostrarString(p.nombre); printf("\n");
+    printf("  Numero: %ld\n", p.numero);
+    printf("  Precio: %.2f\n", p.precio);
+    printf("  En stock: "); MostrarBooleano(p.en_stock); printf("\n");
+    printf("  Fecha adquisicion: "); MostrarFecha(p.fecha_adquisicion); printf("\n");
+}
+
+long int DarNumero(Producto p){
+    return p.numero;
+    }
+float DarPrecio(Producto p){
+    return p.precio;
+    }
+booleano DarEnStock(Producto p){
+    return p.en_stock;
+    }
+Fecha DarFechaAdquisicion(Producto p){
+    return p.fecha_adquisicion;
+    }
