@@ -14,3 +14,30 @@
 
 1757360461 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\string.cpp
 
+1757370523 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\fecha.cpp
+	"fecha.h"
+
+1757370523 c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\fecha.h
+	<stdio.h>
+	"booleano.h"
+
+1757370523 c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\booleano.h
+
+1757380772 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\main.cpp
+	<iostream>
+	"fecha.h"
+	"string.h"
+
+1757370523 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\producto.cpp
+	"producto.h"
+
+1757370523 c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\producto.h
+	"fecha.h"
+	"string.h"
+
+1757380917 c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\string.h
+	<stdio.h>
+
+1757380917 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\string.cpp
+	"string.h"
+
