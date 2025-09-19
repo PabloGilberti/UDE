@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="arreglo.cpp" />
+		<Unit filename="arreglo.h" />
+		<Unit filename="booleano.cpp" />
 		<Unit filename="booleano.h" />
 		<Unit filename="fecha.cpp" />
 		<Unit filename="fecha.h" />

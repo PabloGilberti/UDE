@@ -1,7 +1,11 @@
 # depslib dependency file v1.0
-1757354153 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\main.cpp
+1757444703 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\main.cpp
 	<iostream>
 	"fecha.h"
+	"string.h"
+	<stdio.h>
+	"producto.h"
+	"arreglo.h"
 
 1757356555 c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\fecha.h
 	<stdio.h>
@@ -10,9 +14,11 @@
 1757358371 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\fecha.cpp
 	"fecha.h"
 
-1757355266 c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\booleano.h
+1757432305 c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\booleano.h
+	"stdio.h"
 
-1757360461 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\string.cpp
+1757435998 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\string.cpp
+	"string.h"
 
 1757370523 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\fecha.cpp
 	"fecha.h"
@@ -41,4 +47,26 @@
 
 1757380917 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\string.cpp
 	"string.h"
+
+1757423851 c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\string.h
+	<stdio.h>
+
+1757444967 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\producto.cpp
+	"producto.h"
+	"booleano.h"
+
+1757425643 c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\producto.h
+	"fecha.h"
+	"string.h"
+
+1757435883 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\booleano.cpp
+	"booleano.h"
+	<cctype>
+
+1757444703 source:c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\arreglo.cpp
+	"arreglo.h"
+	"producto.h"
+
+1757443491 c:\users\pgilberti\documents\ude\ude\programacion2\practico4\practico4\arreglo.h
+	"producto.h"
 
