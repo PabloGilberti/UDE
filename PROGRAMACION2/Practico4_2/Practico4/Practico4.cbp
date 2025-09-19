@@ -36,6 +36,10 @@
 		<Unit filename="fecha.cpp" />
 		<Unit filename="fecha.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="producto.cpp" />
+		<Unit filename="producto.h" />
+		<Unit filename="string.cpp" />
+		<Unit filename="string.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

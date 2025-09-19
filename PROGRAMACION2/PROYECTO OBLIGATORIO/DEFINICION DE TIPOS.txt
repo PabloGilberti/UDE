@@ -1,0 +1,29 @@
+//******Modulo Booleano*********
+typedef enum{FALSE, TRUE} booleano;
+//******Modulo String***********
+const int MAXSTRING=80;
+typedef char string[MAXSTRING];
+//*******Modulo  Fecha *********
+typedef struct {int dia; 
+				int mes; 
+				int anio;}Fecha;
+//*******Modulo Jugador ********
+typedeft struct {long cedula; 
+				 string nombre; 
+				 string apellido; 
+				 Fecha nacimiento;} jugador;
+//***** DEFINICION DE AMATEUR ***********
+int meses_jugando;
+//******Modulo Intermedio ***********
+#include "booleano.h"
+typedef struct {int cantAnios; 
+				booleano enPareja} intermedio;
+//******Modulo Profesional**********
+#include "string.h"
+typedef struct {String nombreClub; 
+				int cantPartGanadas} profesional;
+//******Modulo Inscripcion******
+#include "jugador.h"
+cons int MAXINSC=40;
+typedef struct{jugador inscripcion[MAXINSC]; 
+			   int tope} inscripcion;

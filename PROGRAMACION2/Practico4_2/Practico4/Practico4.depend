@@ -23,10 +23,11 @@
 
 1757370523 c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\booleano.h
 
-1757380772 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\main.cpp
+1757381021 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\main.cpp
 	<iostream>
 	"fecha.h"
 	"string.h"
+	<stdio.h>
 
 1757370523 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\practico4\practico4\producto.cpp
 	"producto.h"
