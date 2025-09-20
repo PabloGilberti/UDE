@@ -1,29 +1,71 @@
 //******Modulo Booleano*********
 typedef enum{FALSE, TRUE} booleano;
+
+void cargarBooleano(booleano &b);
+void mostrarBooleano(booleano b);
+
+
 //******Modulo String***********
 const int MAXSTRING=80;
 typedef char string[MAXSTRING];
+
+void cargarSstring(String &s);
+void imprimirString(String s);
+void copiarString(String origen,String &destino);
+
+
 //*******Modulo  Fecha *********
 typedef struct {int dia; 
 				int mes; 
 				int anio;}Fecha;
+				
+void cargarFecha(Fecha &f);               
+void imprimirFecha(Fecha f);        
+booleano fechaValida(Fecha f);
+
+
+
+
 //*******Modulo Jugador ********
-typedeft struct {long cedula; 
+typedef enum { AMATEUR, INTERMEDIO, PROFESIONAL} TipoJugador;
+
+typedef struct {long int cedula; 
 				 string nombre; 
 				 string apellido; 
-				 Fecha nacimiento;} jugador;
-//***** DEFINICION DE AMATEUR ***********
-int meses_jugando;
+				 Fecha  nacimiento;
+				 TipoJugador discriminante
+					union{
+							int meses_jugando;
+							intermedio jugIntermedio;
+							profesional jugProfesional;
+					}uTipoJugador;
+				}jugador;
+				
+void cargarJugador (jugador &j);				
+void darNombre(jugador j, String &s);
+void darApellido(jugador j,String &s);
+Fecha darFechaNac(jugador j);
+TipoJugador darTipoJugador(jugador j);///CONSULTAR PROFESORA
+long int darCedula(jugador j);
+
 //******Modulo Intermedio ***********
 #include "booleano.h"
 typedef struct {int cantAnios; 
-				booleano enPareja} intermedio;
+				booleano enPareja;} intermedio;
+				
 //******Modulo Profesional**********
 #include "string.h"
 typedef struct {String nombreClub; 
 				int cantPartGanadas} profesional;
+				
 //******Modulo Inscripcion******
 #include "jugador.h"
 cons int MAXINSC=40;
 typedef struct{jugador inscripcion[MAXINSC]; 
 			   int tope} inscripcion;
+
+
+
+Modulo de Menu
+
+Modulo main

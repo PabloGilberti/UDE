@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1584205420 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\main.cpp
+	<iostream>
+
+1758322743 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\booleano.cpp
+	"booleano.h"
+
+1758322900 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\booleano.h
+	<stdio.h>
+
+1758322900 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\fecha.cpp
+	"fecha.h"
+
+1758322368 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\fecha.h
+	"booleano.h"
+
+1758322985 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\string.cpp
+	"string.h"
+
+1758322955 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\string.h
+	"booleano.h"
+
+1758324811 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_intermedio.cpp
+
+1758325713 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_profesional.cpp
+
+1758325972 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\tipojugador.cpp
+
