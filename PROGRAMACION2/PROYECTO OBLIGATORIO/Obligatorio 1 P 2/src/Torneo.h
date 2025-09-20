@@ -9,7 +9,7 @@ const int MAXINSC = 40;
 typedef struct {
     Jugador inscripcion[MAXINSC];
     int tope;
-} Torne
+} Torneo;
 
 
 //Verifica si no hay nadie inscripto
@@ -17,13 +17,34 @@ booleano estaVacia(Torneo t);
 //verifica si esta lleno el torneo
 booleano estaLlena(Torneo t);
 //obtener un jugador segun la cedula
-booleano obtenerJugador(Torneo t,int long cedula);
+booleano existeJugador(Torneo t,int long cedula);
 //agrega un jugador al torneo quedando ingresado por ordenm de inscripcion.
 void agregarJugador(Torneo &t, Jugador j);
 //Eliinar Jugador por cedula y reacomodar jugadores
 void elimJugCed(Torneo &t, long int  cedula);
 //incrementar en 1 la partida ganada del profesional.
 void incremPartProfesional(Torneo &t, long int cedula);
+//devuleve la cantidad de jugadores por tipo.
+void devolverCantJugadoresXtipo(Torneo t,int &amateur,int &intermedio,int &profesional);
+//Saber cuantos Jugadores nacieron en esa fecha
+void cantJugNacFecha(Torneo t,Fecha &f,int &cantJug);
+//saber la cantidad de jugadores intermedios que juegan solos o en parejas.
+void jugInterSolosyParejas(Torneo t, int &solo,int &pareja);
+//nos retorna si existen jugadores con mas de X meses jugando
+void cantMesesJugAmat(Torneo t,int &meses,int &cantMesesJugando);
+//Devuelve la cantidad de jugadores que tiene mas partidas jugadas de las que se les pasa
+void cantPartidasJugadas(Torne t, int &cantidad, booleano &existe);
+//Lista los jugadores por orden de inscripcion.
+void listarJugadoresXordenInscripcion(Torneo t);
+//listar los jugadores que nacieron despues de la fecha solicitada
+void listarJugadoresNacidosFecha(Torneo t);
+//Dado el nombre de un club listar los jugadores proveninete del mismo.
+void listarJugadoresProvClub(Torneo t);
+//Dada una cedula listar en detalles los datos del jugador
+void listarDatosJugador(Torneo t);
+//listar en detalle todos los datos dell jugador profesional con la mayor cantidad de partidas ganadas
+void listarJugadorMasPartidas(Torneo t);
+
 
 int CantidadInscritos(Torneo i);
 
