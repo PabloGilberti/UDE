@@ -10,7 +10,7 @@ typedef char String[MAX];
 int strlar(String s);
 
 //Imprime la cadena por pantalla.
-void print(String s);
+void print(String &s);
 
 //Carga la cadena por teclado.
 void scan(String &s);

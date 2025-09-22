@@ -51,3 +51,24 @@ es = TRUE;
 }
 return es;
 }
+int compararFechas(Fecha a, Fecha b) {
+
+    if (a.anio < b.anio)
+        return -1;
+
+    if (a.anio > b.anio)
+        return  1;
+
+    if (a.mes  < b.mes )
+        return -1;
+
+    if (a.mes  > b.mes )
+        return  1;
+
+    if (a.dia  < b.dia )
+        return -1;
+    if (a.dia  > b.dia )
+        return  1;
+
+    return 0;
+}

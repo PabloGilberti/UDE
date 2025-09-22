@@ -3,7 +3,7 @@
 #include "booleano.h"
 
 typedef struct {int cantAnios;
-				booleano enPareja;} intermedio;
+				booleano enPareja;}intermedio;
 
 
 //Carga los datos de un jugador intermedio

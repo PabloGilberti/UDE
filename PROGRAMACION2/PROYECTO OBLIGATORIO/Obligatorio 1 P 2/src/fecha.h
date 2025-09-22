@@ -21,6 +21,6 @@ int darAnio(Fecha f);
 //verifica que sea una fecha valida
 booleano fechaValida(Fecha f);
 
-
+int compararFechas(Fecha a, Fecha b);
 
 #endif // FECHA_H_INCLUDED

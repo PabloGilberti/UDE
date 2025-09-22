@@ -1,15 +1,10 @@
-#include <iostream>
 #include <stdio.h>
 #include "menu.h"
-#include "Torneo.h"
-#include "jugador.h"
-#include "fecha.h"
-#include "booleano.h"
+
 
 int main() {
     Torneo t;
-    t.tope = 0;           /* o inicializarTorneo(t); si tenes esa funcion */
-
+    t.tope = 0;
     int opcion;
     do {
         MenuPrincipal(opcion);
@@ -21,21 +16,23 @@ int main() {
                 MenuAltasBajas(opAB);
                 switch (opAB) {
                 case 1: { /* Inscripcion de jugador */
-                    Jugador j;
-                    /* TODO: cargarJugador(j); */
-                    /* TODO: agregarJugador(t, j); */
+                    jugador j;
+                     cargarJugador(j);
+                     agregarJugador(t, j);
                 } break;
                 case 2: { /* Baja por CI */
                     long int ci;
                     printf("CI a dar de baja: ");
                     scanf("%ld", &ci);
-                    /* TODO: elimJugCed(t, ci); */
+                    elimJugCed(t,ci);
+
                 } break;
                 case 3: { /* Registrar partida ganada (profesional) */
                     long int ci;
                     printf("CI del profesional: ");
                     scanf("%ld", &ci);
-                    /* TODO: incrementarPartProfesional(t, ci); */
+                    incrementarPartProfesional(t,ci);
+
                 } break;
                 }
             } while (opAB != 0);
@@ -48,26 +45,26 @@ int main() {
                 switch (opC) {
                 case 1: {
                     int am, in, pr;
-                    /* TODO: devolverCantJugadoresPorTipo(t, am, in, pr); */
+                    devolverCantJugadoresPorTipo(t,am,in,pr);
                     printf("Amateur: %d  Intermedio: %d  Profesional: %d\n", am, in, pr);
                 } break;
                 case 2: {
                     Fecha f;
-                    /* TODO: cargarFecha(f); */
+                    cargarFecha(f);
                     int cant;
-                    /* TODO: cantJugadoresNacidosFecha(t, f, cant); */
+                    cantJugadoresNacidosFecha(t, f, cant);
                     printf("Nacidos en esa fecha: %d\n", cant);
                 } break;
                 case 3: {
                     int solo, pareja;
-                    /* TODO: jugInterSolosYParejas(t, solo, pareja); */
+                    /*jugInterSolosYParejas(t, solo, pareja); */
                     printf("Intermedios solos: %d, en pareja: %d\n", solo, pareja);
                 } break;
                 case 4: {
                     int x;
                     printf("Ingrese X (meses): ");
                     scanf("%d", &x);
-                    /* TODO:
+                    /*
                     if (hayAmateurMasMeses(t, x)) printf("SI hay.\n");
                     else printf("NO hay.\n"); */
                 } break;
@@ -75,7 +72,7 @@ int main() {
                     int y;
                     printf("Ingrese Y (partidas ganadas): ");
                     scanf("%d", &y);
-                    /* TODO:
+                    /*
                     if (hayProfesionalMasPartidas(t, y)) printf("SI hay.\n");
                     else printf("NO hay.\n"); */
                 } break;
@@ -89,27 +86,27 @@ int main() {
                 MenuListados(opL);
                 switch (opL) {
                 case 1:
-                    /* TODO: listarJugadoresEnInscripcion(t); */
+                    /*listarJugadoresEnInscripcion(t); */
                     break;
                 case 2: {
                     Fecha f;
-                    /* TODO: cargarFecha(f); */
-                    /* TODO: listarJugadoresLuegoDeFecha(t, f); */
+                    /*cargarFecha(f); */
+                    /*listarJugadoresLuegoDeFecha(t, f); */
                 } break;
                 case 3: {
                     char club[64];
                     printf("Nombre del club: ");
                     scanf(" %63[^\n]", club);
-                    /* TODO: listarJugadoresDeClub(t, club); */
+                    /*listarJugadoresDeClub(t, club); */
                 } break;
                 case 4: {
                     long int ci; int existe;
                     printf("CI: ");
                     scanf("%ld", &ci);
-                    /* TODO: listarJugadorPorCedula(t, ci, existe); */
+                    /*listarJugadorPorCedula(t, ci, existe); */
                 } break;
                 case 5:
-                    /* TODO: listarJugadorMasPartidas(t); */
+                    /*listarJugadorMasPartidas(t); */
                     break;
                 }
             } while (opL != 0);

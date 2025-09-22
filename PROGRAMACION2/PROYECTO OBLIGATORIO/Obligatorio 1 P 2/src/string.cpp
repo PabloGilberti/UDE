@@ -8,7 +8,7 @@ int strlar(String s)
     return i;
 }
 //Imprime la cadena por pantalla.
-void print(String s)
+void print(String &s)
 {
     int i = 0;
     while (s[i]!= '\0')

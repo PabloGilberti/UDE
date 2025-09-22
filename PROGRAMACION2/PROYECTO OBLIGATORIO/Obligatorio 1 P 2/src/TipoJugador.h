@@ -1,13 +1,12 @@
 #ifndef TIPOJUGADOR_H_INCLUDED
 #define TIPOJUGADOR_H_INCLUDED
+#include <stdio.h>
 
-
-#include "boolean.h"
 typedef enum {AMATEUR, INTERMEDIO, PROFESIONAL} TipoJugador;
 
 
 //Cargas un tipo de jugador
-void cargarTipoJugador (TipoJugador &t);
+void cargarTipoJugador(TipoJugador &t);
 //muestra el tipo de jugador.
 void darTipoJugador (TipoJugador t);
 

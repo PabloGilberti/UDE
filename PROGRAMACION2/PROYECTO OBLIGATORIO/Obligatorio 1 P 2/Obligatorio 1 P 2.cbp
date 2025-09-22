@@ -32,7 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
 		<Unit filename="src/J_intermedio.cpp" />
 		<Unit filename="src/J_intermedio.h" />
 		<Unit filename="src/J_profesional.cpp" />
@@ -47,6 +46,9 @@
 		<Unit filename="src/booleano.h" />
 		<Unit filename="src/fecha.cpp" />
 		<Unit filename="src/fecha.h" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/menu.cpp" />
+		<Unit filename="src/menu.h" />
 		<Unit filename="src/string.cpp" />
 		<Unit filename="src/string.h" />
 		<Extensions>
