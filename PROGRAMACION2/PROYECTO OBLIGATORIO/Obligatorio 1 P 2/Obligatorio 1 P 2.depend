@@ -44,10 +44,10 @@
 1758503919 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_intermedio.cpp
 	"J_intermedio.h"
 
-1758422324 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_profesional.cpp
+1758593928 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_profesional.cpp
 	"J_profesional.h"
 
-1758503967 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\jugador.cpp
+1758592516 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\jugador.cpp
 	"Jugador.h"
 
 1758469614 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\string.cpp
@@ -56,12 +56,11 @@
 1758408795 c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\string.h
 	"booleano.h"
 
-1758409318 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\tipojugador.cpp
+1758592516 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\tipojugador.cpp
 	"TipoJugador.h"
 
-1758497571 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\torneo.cpp
+1758504015 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\torneo.cpp
 	"Torneo.h"
-	"j_profesional.h"
 
 1758419351 c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\jugador.h
 	<stdio.h>
@@ -90,7 +89,7 @@
 1758503755 c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\menu.h
 	"Torneo.h"
 
-1758503845 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\main.cpp
+1758583346 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\main.cpp
 	<stdio.h>
 	"menu.h"
 

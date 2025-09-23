@@ -1,21 +1,31 @@
 #include"TipoJugador.h"
 // Carga un tipo de jugador desde teclado
 void cargarTipoJugador(TipoJugador &t) {
-    int opcion;
-    printf("Seleccione el tipo de jugador:\n");
-    printf("0 - Amateur\n");
-    printf("1 - Intermedio\n");
-    printf("2 - Profesional\n");
-    printf("Opcion: ");
-    scanf("%d", &opcion);
+int opcion;
+    do {
 
-    while (opcion < 0 || opcion > 2) {
-        printf("Opcion invalida. Intente nuevamente: ");
-        scanf("%d", &opcion);
-    }
-
+        printf("Seleccione el tipo de jugador:\n");
+        printf("0 - Amateur\n");
+        printf("1 - Intermedio\n");
+        printf("2 - Profesional\n");
+        printf("Opcion: ");
+        scanf(" %d", &opcion);
+        switch (opcion){
+            case 0:{
+                        t=AMATEUR;
+                }break;
+            case 1:{
+                        t=INTERMEDIO;
+                }break;
+            case 2:{
+                        t=PROFESIONAL;
+                }break;
+            default:
+                printf("Opcion invalida. Intente nuevamente: \n");
+                break;
+         }
+    }while (opcion < 0 || opcion > 3);
 }
-
 // Muestra el tipo de jugador
 void darTipoJugador(TipoJugador t) {
     switch(t) {

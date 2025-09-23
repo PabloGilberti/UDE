@@ -4,9 +4,10 @@
 
 void cargarProfesional(profesional &p)
 {
-    printf ("Ingrese su club:\n");
-    scanf ("%s", p.nombreClub);
-    printf ("Ingrese su cantidad de partidas ganadas:%d \n");
+
+    printf ("\nIngrese su club:");
+    scan(p.nombreClub);
+    printf ("\nIngrese su cantidad de partidas ganadas:");
     scanf ("%d", &p.cantPartGanadas);
 }
 //Muestra los datos de un jugador  Profesional

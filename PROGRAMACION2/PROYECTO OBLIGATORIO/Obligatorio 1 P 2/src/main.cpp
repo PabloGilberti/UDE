@@ -57,7 +57,7 @@ int main() {
                 } break;
                 case 3: {
                     int solo, pareja;
-                    /*jugInterSolosYParejas(t, solo, pareja); */
+                    //jugInterSolosYParejas(t, &solo, &pareja);
                     printf("Intermedios solos: %d, en pareja: %d\n", solo, pareja);
                 } break;
                 case 4: {

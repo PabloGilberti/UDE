@@ -1,4 +1,5 @@
 #include "Jugador.h"
+
 // Operación de carga de un jugdor
 
 void cargarJugador(jugador &j){
@@ -13,21 +14,23 @@ void cargarJugador(jugador &j){
     printf ("\n Ingrese el tipo de jugador: ");
     cargarTipoJugador(j.discriminante);
 
-        switch (j.discriminante)
+ switch (j.discriminante)
+
         {
             case AMATEUR:
                 printf ("\n Indique cantidad  de meses jugando: ");
                 scanf("%d", &j.uTipoJugador.meses_jugando);
                 break;
             case INTERMEDIO:
-                printf ("\n Ingrese cantidad de años : ");
-                void cargarIntermedio(intermedio &i);
+                //printf ("\n Ingrese cantidad de años : ");
+                cargarIntermedio(j.uTipoJugador.jugIntermedio);
                 break;
             case PROFESIONAL:
-                printf ("\n Ingrese el nombre de club que pertenece  ");
-                void cargarProfesional(profesional &p);
+                //printf ("\n Ingrese el nombre de club que pertenece  ");
+                cargarProfesional(j.uTipoJugador.jugProfesional);
                 break;
         }
+
 }
 
 
