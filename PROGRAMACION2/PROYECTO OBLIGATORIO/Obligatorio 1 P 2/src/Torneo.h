@@ -31,9 +31,9 @@ void devolverCantJugadoresPorTipo(Torneo t,int &amateur,int &intermedio,int &pro
 //Saber cuantos Jugadores nacieron en esa fecha
 void cantJugadoresNacidosFecha(Torneo t,Fecha f,int &cantJug);
 //saber la cantidad de jugadores intermedios que juegan solos o en parejas.
-void jugInterSolosyParejas(Torneo t, int &solo,int &pareja);
+void jugInterSolosYParejas(Torneo t, int &solo,int &pareja);
 //nos retorna si existen jugadores con mas de X meses jugando
-void cantMesesJugAmat(Torneo t,int &meses,int &cantMesesJugando);
+void cantMesesJugAmat(Torneo t,int meses,int &cantJugadores);
 //Devuelve si hay jugadores que tiene mas partidas jugadas de las que se les pasa
 booleano profesionalMasPartidas(Torneo t, int cantPartidas);
 //Lista los jugadores por orden de inscripcion.

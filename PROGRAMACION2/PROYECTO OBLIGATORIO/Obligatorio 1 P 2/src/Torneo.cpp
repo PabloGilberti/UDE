@@ -119,13 +119,13 @@ void jugInterSolosYParejas(Torneo t, int &solo, int &pareja) {
     }
 }
 
-void cantMesesJugAmat(Torneo t, int meses,int &cantMesesJugando) {
+void cantMesesJugAmat(Torneo t, int meses,int &cantJugadores) {
     int i;
-    cantMesesJugando=0;
+    cantJugadores=0;
     for (i = 0; i < t.tope; i++) {
         if (t.inscripcion[i].discriminante == AMATEUR) {
             if (t.inscripcion[i].uTipoJugador.meses_jugando > meses) {
-                cantMesesJugando++;
+                cantJugadores++;
             }
         }
     }

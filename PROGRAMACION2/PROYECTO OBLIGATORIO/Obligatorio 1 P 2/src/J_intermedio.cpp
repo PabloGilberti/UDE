@@ -3,14 +3,14 @@
 //Carga los datos de un jugador intermedio
 void cargarIntermedio(intermedio &i)
 {
-    printf ("Ingrese su edad: \n");
+    printf ("Ingrese su edad:");
     scanf ("%d", &i.cantAnios);
 
     char pareja;
-    printf("Juega en pareja(s/n): \n");
+    printf("\Juega en pareja(s/n):");
     scanf (" %c", &pareja);
 
-    if (pareja == 's' || pareja || 'S')
+    if (pareja == 's' || pareja == 'S')
         i.enPareja = TRUE;
     else
         i.enPareja = FALSE;

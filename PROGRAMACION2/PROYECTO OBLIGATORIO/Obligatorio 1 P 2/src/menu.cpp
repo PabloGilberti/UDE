@@ -25,8 +25,8 @@ void MenuConsultas(int &opcion) {
     printf("1- Total de jugadores de cada tipo inscriptos\n");
     printf("2- Total de jugadores nacidos en una fecha especificas\n");
     printf("3- Total de jugadores intermedios que juegan solos y en parejas\n");
-    printf("4- Saber si algún jugador amateur lleva jugando más de una cantidad dada de meses\n");
-    printf("5- Saber si algún jugador profesional lleva ganadas más de cierta cantidad de partidas\n");
+    printf("4- Saber si algun jugador amateur lleva jugando más de una cantidad dada de meses\n");
+    printf("5- Saber si algun jugador profesional lleva ganadas más de cierta cantidad de partidas\n");
     printf("0- Volver\n");
     printf("Ingrese una opcion: ");
     scanf("%d", &opcion);

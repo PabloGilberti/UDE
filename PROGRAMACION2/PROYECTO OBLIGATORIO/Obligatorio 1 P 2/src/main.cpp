@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "menu.h"
+#include "Torneo.h"
 
 
 int main() {
@@ -57,24 +58,27 @@ int main() {
                 } break;
                 case 3: {
                     int solo, pareja;
-                    //jugInterSolosYParejas(t, &solo, &pareja);
+                    jugInterSolosYParejas(t, solo, pareja);
                     printf("Intermedios solos: %d, en pareja: %d\n", solo, pareja);
                 } break;
                 case 4: {
-                    int x;
+                    int meses,cantidad;
                     printf("Ingrese X (meses): ");
-                    scanf("%d", &x);
-                    /*
-                    if (hayAmateurMasMeses(t, x)) printf("SI hay.\n");
-                    else printf("NO hay.\n"); */
+                    scanf("%d", &meses);
+                    cantMesesJugAmat(t, meses,cantidad);
+                    if (cantidad>0)
+                        printf("SI hay %d jugadores ",cantidad);
+                    else
+                        printf("NO hay.\n");
                 } break;
                 case 5: {
-                    int y;
-                    printf("Ingrese Y (partidas ganadas): ");
-                    scanf("%d", &y);
-                    /*
-                    if (hayProfesionalMasPartidas(t, y)) printf("SI hay.\n");
-                    else printf("NO hay.\n"); */
+                    int cantidad;
+                    printf("Ingrese cantidad (partidas ganadas): ");
+                    scanf("%d", &cantidad);
+                    if (profesionalMasPartidas(t, cantidad))
+                        printf("SI hay.\n");
+                    else
+                        printf("NO hay.\n");
                 } break;
                 }
             } while (opC != 0);
@@ -86,7 +90,7 @@ int main() {
                 MenuListados(opL);
                 switch (opL) {
                 case 1:
-                    /*listarJugadoresEnInscripcion(t); */
+                    listarJugadoresXordenInscripcion(t);
                     break;
                 case 2: {
                     Fecha f;

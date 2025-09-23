@@ -8,23 +8,26 @@
 1758322900 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\booleano.h
 	<stdio.h>
 
-1758322900 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\fecha.cpp
+1758641115 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\fecha.cpp
 	"fecha.h"
 
-1758322368 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\fecha.h
+1758633117 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\fecha.h
 	"booleano.h"
 
-1758322985 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\string.cpp
+1758633117 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\string.cpp
 	"string.h"
 
-1758322955 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\string.h
+1758633117 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\string.h
 	"booleano.h"
 
-1758324811 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_intermedio.cpp
+1758648478 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_intermedio.cpp
+	"J_intermedio.h"
 
-1758325713 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_profesional.cpp
+1758633117 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_profesional.cpp
+	"J_profesional.h"
 
-1758325972 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\tipojugador.cpp
+1758633117 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\tipojugador.cpp
+	"TipoJugador.h"
 
 1758391049 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\main.cpp
 	<iostream>
@@ -92,4 +95,42 @@
 1758583346 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\main.cpp
 	<stdio.h>
 	"menu.h"
+
+1758633117 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_intermedio.h
+	"booleano.h"
+
+1758633117 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_profesional.h
+	"string.h"
+	<stdio.h>
+
+1758642441 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\jugador.cpp
+	"Jugador.h"
+
+1758633117 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\jugador.h
+	<stdio.h>
+	"TipoJugador.h"
+	"fecha.h"
+	"string.h"
+	"J_intermedio.h"
+	"J_profesional.h"
+
+1758633117 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\tipojugador.h
+	<stdio.h>
+
+1758654321 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\main.cpp
+	<stdio.h>
+	"menu.h"
+	"Torneo.h"
+
+1758633117 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\menu.h
+	"Torneo.h"
+
+1758652630 c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\torneo.h
+	"jugador.h"
+
+1758653478 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\menu.cpp
+	"menu.h"
+
+1758652857 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\torneo.cpp
+	"Torneo.h"
 

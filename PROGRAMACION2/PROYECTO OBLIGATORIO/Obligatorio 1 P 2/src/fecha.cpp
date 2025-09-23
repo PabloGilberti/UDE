@@ -2,8 +2,16 @@
 //Carga una fecha
 void cargarFecha (Fecha &f)
 {
-printf ("Ingrese día, mes y año: ");
-scanf ("%d%d%d", &f.dia, &f.mes,&f.anio);
+printf("\n");
+printf ("\nIngrese dia :");
+scanf ("%d", &f.dia);
+printf ("\nIngrese mes :");
+scanf ("%d",&f.mes);
+printf ("\nIngrese anio :");
+scanf ("%d",&f.anio);
+
+
+
 }
 //Imprime en pantalla la fecha
 void mostrarFecha (Fecha f)
