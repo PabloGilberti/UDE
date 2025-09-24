@@ -29,7 +29,10 @@ void darApellido(jugador j,String &s);
 Fecha darFechaNac(jugador j);
 //TipoJugador darTipoJugador(jugador j);
 long int darCedula(jugador j);
+//retorna la cantidad de meses  quw un jugador esta jugando
 int darMesesJugando(jugador j);
+//Retorna el jugador intermedio
 intermedio darJugIntermedio(jugador j);
+//retorna el jugador profesional
 profesional darJugProfesional(jugador j);
 #endif // JUGADOR_H_INCLUDED

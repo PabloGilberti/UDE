@@ -152,7 +152,9 @@ void listarJugadoresXordenInscripcion(Torneo t) {
         jugador j = t.inscripcion[i];
         printf("%-12ld", j.cedula);
         print(j.nombre);
+        printf("         ");
         print(j.apellido);
+        printf("         ");
         mostrarFecha(j.nacimiento);
         printf("  ");
         if (j.discriminante == AMATEUR) {
@@ -162,7 +164,7 @@ void listarJugadoresXordenInscripcion(Torneo t) {
         } else {
             printf("PROFESIONAL");
         }
-        print(j.uTipoJugador.jugProfesional.nombreClub);
+
         printf("\n");
     }
 }
@@ -191,16 +193,14 @@ void listarJugadoresDeClub(Torneo t, String club) {
          jugador j = t.inscripcion[i];
          prof=darJugProfesional(j);
          darNombreClubOrigen(prof,retClub);
-         print(retClub);
          booleano iguales = streq(retClub, club);
-
-
-             if (iguales) {
-                printf("%-12ld", j.cedula);
+         if (iguales) {
+            listarJugadorPorCedula(t,j.cedula);
+                /*printf("%-12ld", j.cedula);
                 print(j.nombre);
                 print(j.apellido);
                 mostrarFecha(j.nacimiento);
-                printf("\n");
+                printf("\n");*/
             }
 
     }
@@ -214,12 +214,19 @@ void listarJugadorPorCedula(Torneo t, long int cedula) {
     }
 
      jugador j = t.inscripcion[indice];
+     printf("===============================\n");
+     printf("CI           Nombre        Apellido      Fecha Nac.   Tipo\n");
+     printf("------------------------------------------------------------\n");
      printf("%-12ld", j.cedula);
+     printf("         ");
      print(j.nombre);
+     printf("        ");
      print(j.apellido);
+     printf("        ");
      mostrarFecha(j.nacimiento);
      printf("\n");
-
+     printf("Otros datos del jugador:\n");
+     printf("------------------------\n");
     if (j.discriminante == AMATEUR) {
         printf("  Tipo: AMATEUR\n");
         printf("  Meses jugando: %d\n", j.uTipoJugador.meses_jugando);

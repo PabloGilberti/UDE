@@ -1,6 +1,9 @@
 #include "menu.h"
+#include <cstdlib>
+
 
 void MenuPrincipal(int &opcion) {
+    system("CLS");
     printf("\n=== MENU PRINCIPAL ===\n");
     printf("1- Altas y bajas\n");
     printf("2- Consultas\n");
@@ -8,9 +11,11 @@ void MenuPrincipal(int &opcion) {
     printf("0- Salir\n");
     printf("Ingrese una opcion: ");
     scanf("%d", &opcion);
+    system("CLS");
 }
 
 void MenuAltasBajas(int &opcion) {
+    system("CLS");
     printf("\n--- ALTAS Y BAJAS ---\n");
     printf("1- Inscripcion de jugador\n");
     printf("2- Salida de jugador (por CI)\n");
@@ -18,9 +23,11 @@ void MenuAltasBajas(int &opcion) {
     printf("0- Volver\n");
     printf("Ingrese una opcion: ");
     scanf("%d", &opcion);
+    system("CLS");
 }
 
 void MenuConsultas(int &opcion) {
+
     printf("\n--- CONSULTAS ---\n");
     printf("1- Total de jugadores de cada tipo inscriptos\n");
     printf("2- Total de jugadores nacidos en una fecha especificas\n");
@@ -30,9 +37,12 @@ void MenuConsultas(int &opcion) {
     printf("0- Volver\n");
     printf("Ingrese una opcion: ");
     scanf("%d", &opcion);
+    system("CLS");
 }
 
+
 void MenuListados(int &opcion) {
+
     printf("\n--- LISTADOS ---\n");
     printf("1- Listado básico de jugadores ingresados\n");
     printf("2- Listado básico de jugadores nacidos luego de una fecha determinada\n");
@@ -42,4 +52,6 @@ void MenuListados(int &opcion) {
     printf("0- Volver\n");
     printf("Ingrese una opcion: ");
     scanf("%d", &opcion);
+    system("CLS");
+
 }

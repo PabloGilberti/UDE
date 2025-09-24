@@ -37,5 +37,6 @@ void sumarPartidaGanada(profesional &p) {
 
     p.cantPartGanadas = p.cantPartGanadas + 1;
 
-    /* o p.cantPartGanadas++; */
+    printf("Se incremento las partidas ganadas a %d",p.cantPartGanadas);
+
 }
