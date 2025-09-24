@@ -1,8 +1,6 @@
 #ifndef TORNEO_H_INCLUDED
 #define TORNEO_H_INCLUDED
 #include "jugador.h"
-//#include "j_profesional.h"
-//#include "string.h"
 
 // Constante
 const int MAXINSC = 40;
@@ -39,9 +37,9 @@ booleano profesionalMasPartidas(Torneo t, int cantPartidas);
 //Lista los jugadores por orden de inscripcion.
 void listarJugadoresXordenInscripcion(Torneo t);
 //listar los jugadores que nacieron despues de la fecha solicitada
-void listarJugadoresDespuesDeFecha(Torneo t,Fecha f);
+void listarJugadoresLuegoDeFecha(Torneo t,Fecha f);
 //Dado el nombre de un club listar los jugadores proveninete del mismo.
-void listarJugadoresDeUnClub(Torneo t,String club);
+void listarJugadoresDeClub(Torneo t,String club);
 //Dada una cedula listar en detalles los datos del jugador
 void listarJugadorPorCedula(Torneo t, long int cedula);
 //listar en detalle todos los datos dell jugador profesional con la mayor cantidad de partidas ganadas

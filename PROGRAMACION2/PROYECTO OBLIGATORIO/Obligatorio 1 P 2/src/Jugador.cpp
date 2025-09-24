@@ -74,4 +74,17 @@ void mostrarCedula(jugador j)
 {
     printf("\n Cedula: %ld", j.cedula);
 }
+int darMesesJugando(jugador j){
 
+    return j.uTipoJugador.meses_jugando;
+
+
+}
+intermedio darJugIntermedio(jugador j){
+
+    return j.uTipoJugador.jugIntermedio;
+}
+profesional darJugProfesional(jugador j){
+
+    return j.uTipoJugador.jugProfesional;
+}

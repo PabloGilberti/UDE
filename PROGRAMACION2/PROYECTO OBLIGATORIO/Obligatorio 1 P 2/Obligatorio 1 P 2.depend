@@ -134,3 +134,69 @@
 1758652857 source:c:\users\pgilberti\documents\ude\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\torneo.cpp
 	"Torneo.h"
 
+1758667300 source:c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\booleano.cpp
+	"booleano.h"
+
+1758667300 c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\booleano.h
+	<stdio.h>
+
+1758667300 source:c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\fecha.cpp
+	"fecha.h"
+
+1758667300 c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\fecha.h
+	"booleano.h"
+
+1758667300 source:c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_intermedio.cpp
+	"J_intermedio.h"
+
+1758667300 c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_intermedio.h
+	"booleano.h"
+
+1758676326 source:c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_profesional.cpp
+	"J_profesional.h"
+	"string.h"
+
+1758667300 c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\j_profesional.h
+	"string.h"
+	<stdio.h>
+
+1758667300 c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\string.h
+	"booleano.h"
+
+1758674621 source:c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\jugador.cpp
+	"Jugador.h"
+
+1758674856 c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\jugador.h
+	<stdio.h>
+	"TipoJugador.h"
+	"fecha.h"
+	"string.h"
+	"J_intermedio.h"
+	"J_profesional.h"
+
+1758667300 c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\tipojugador.h
+	<stdio.h>
+
+1758672425 source:c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\main.cpp
+	<stdio.h>
+	"menu.h"
+	"Torneo.h"
+
+1758667300 c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\menu.h
+	"Torneo.h"
+
+1758671731 c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\torneo.h
+	"jugador.h"
+
+1758667300 source:c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\menu.cpp
+	"menu.h"
+
+1758676326 source:c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\string.cpp
+	"string.h"
+
+1758667300 source:c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\tipojugador.cpp
+	"TipoJugador.h"
+
+1758675418 source:c:\users\pablo\documents\ude\programacion2\proyecto obligatorio\obligatorio 1 p 2\src\torneo.cpp
+	"Torneo.h"
+

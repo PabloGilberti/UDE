@@ -1,4 +1,5 @@
 #include "J_profesional.h"
+#include "string.h"
 
 //Carga los datos de un jugador profesional
 
@@ -21,7 +22,8 @@ void mostrarProfesional(profesional p)
 void darNombreClubOrigen(profesional p,String &s)
 {
 
-    strcop (p.nombreClub, s);
+    strcop (s,p.nombreClub);
+
 }
 
 //Retorna la cantidad de partidas ganadas por el jugador de tipo profesional.

@@ -17,13 +17,19 @@ typedef struct {long int cedula;
                        profesional jugProfesional;
 					  }uTipoJugador;
 				}jugador;
-
+//Carga el tipo jugador
 void cargarJugador (jugador &j);
+//Muestra un jugador
 void mostrarJugado (jugador j);
+//Devuelve el nombre del jugador
 void darNombre(jugador j, String &s);
+//Devuelve el apellido del jugador
 void darApellido(jugador j,String &s);
+//Devuelve la fecha de nacimiento
 Fecha darFechaNac(jugador j);
 //TipoJugador darTipoJugador(jugador j);
 long int darCedula(jugador j);
-
+int darMesesJugando(jugador j);
+intermedio darJugIntermedio(jugador j);
+profesional darJugProfesional(jugador j);
 #endif // JUGADOR_H_INCLUDED

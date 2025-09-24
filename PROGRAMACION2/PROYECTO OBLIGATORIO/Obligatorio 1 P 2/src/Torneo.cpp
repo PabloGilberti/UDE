@@ -162,11 +162,12 @@ void listarJugadoresXordenInscripcion(Torneo t) {
         } else {
             printf("PROFESIONAL");
         }
+        print(j.uTipoJugador.jugProfesional.nombreClub);
         printf("\n");
     }
 }
 
-void listarJugadoresDespuesDeFecha(Torneo t, Fecha f) {
+void listarJugadoresLuegoDeFecha(Torneo t, Fecha f) {
 
     printf("Jugadores nacidos luego de "); mostrarFecha(f); printf(":\n");
     for (int i = 0; i < t.tope; i++) {
@@ -181,12 +182,20 @@ void listarJugadoresDespuesDeFecha(Torneo t, Fecha f) {
     }
 }
 
-void listarJugadoresDeUnClub(Torneo t, String club) {
-
+void listarJugadoresDeClub(Torneo t, String club) {
+    profesional prof;
+    String retClub;
     printf("Profesionales del club '%s':\n", club);
     for (int i = 0; i < t.tope; i++) {
-        jugador j = t.inscripcion[i];
-             if (j.uTipoJugador.jugProfesional.nombreClub == club) {
+
+         jugador j = t.inscripcion[i];
+         prof=darJugProfesional(j);
+         darNombreClubOrigen(prof,retClub);
+         print(retClub);
+         booleano iguales = streq(retClub, club);
+
+
+             if (iguales) {
                 printf("%-12ld", j.cedula);
                 print(j.nombre);
                 print(j.apellido);

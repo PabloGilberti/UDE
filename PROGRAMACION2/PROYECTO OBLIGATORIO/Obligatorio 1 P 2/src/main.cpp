@@ -94,14 +94,14 @@ int main() {
                     break;
                 case 2: {
                     Fecha f;
-                    /*cargarFecha(f); */
-                    /*listarJugadoresLuegoDeFecha(t, f); */
+                    cargarFecha(f);
+                    listarJugadoresLuegoDeFecha(t, f);
                 } break;
                 case 3: {
-                    char club[64];
+                    String club;
                     printf("Nombre del club: ");
-                    scanf(" %63[^\n]", club);
-                    /*listarJugadoresDeClub(t, club); */
+                    scan(club);
+                    listarJugadoresDeClub(t, club);
                 } break;
                 case 4: {
                     long int ci; int existe;
