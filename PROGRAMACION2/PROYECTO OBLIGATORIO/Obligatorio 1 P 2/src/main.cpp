@@ -107,10 +107,10 @@ int main() {
                     long int ci; int existe;
                     printf("CI: ");
                     scanf("%ld", &ci);
-                    /*listarJugadorPorCedula(t, ci, existe); */
+                    listarJugadorPorCedula(t, ci);
                 } break;
                 case 5:
-                    /*listarJugadorMasPartidas(t); */
+                    listarJugadorMasPartidas(t);
                     break;
                 }
             } while (opL != 0);
