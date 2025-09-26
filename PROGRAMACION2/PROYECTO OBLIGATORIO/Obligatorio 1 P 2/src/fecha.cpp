@@ -2,14 +2,19 @@
 //Carga una fecha
 void cargarFecha (Fecha &f)
 {
-printf("\n");
-printf ("\nIngrese dia :");
-scanf ("%d", &f.dia);
-printf ("\nIngrese mes :");
-scanf ("%d",&f.mes);
-printf ("\nIngrese anio :");
-scanf ("%d",&f.anio);
+do {
+        printf("\n");
+        printf("Ingrese dia : ");
+            scanf("%d", &f.dia);
+        printf("Ingrese mes : ");
+            scanf("%d", &f.mes);
+        printf("Ingrese anio: ");
+            scanf("%d", &f.anio);
 
+        if (fechaValida(f) == FALSE) {
+            printf("Fecha invalida. Reintente.\n");
+        }
+    } while (fechaValida(f) == FALSE);
 
 
 }
@@ -36,28 +41,30 @@ return f.anio;
 //verifica que sea una fecha valida
 booleano fechaValida (Fecha f)
 {
-booleano es = FALSE;
-switch (f.mes)
-{
-case 1: case 3: case 5: case 7:
-case 8: case 10: case 12:
-if (f.dia >=1 && f.dia <=31)
-es = TRUE;
-break;
-case 4: case 6: case 9: case 11:
-if (f.dia >=1 && f.dia <=30)
-es = TRUE;
-break;
-case 2: if (f.anio % 4 == 0)
-{ if (f.dia >=1 && f.dia <=29)
-es = TRUE;
-}
-else
-{ if (f.dia >=1 && f.dia <=28)
-es = TRUE;
-}
-}
-return es;
+    booleano es = FALSE;
+    switch (f.mes)
+    {
+        case 1: case 3: case 5: case 7:
+        case 8: case 10: case 12:
+            if (f.dia >=1 && f.dia <=31)
+                es = TRUE;
+        break;
+        case 4: case 6: case 9: case 11:
+            if (f.dia >=1 && f.dia <=30)
+            es = TRUE;
+        break;
+        case 2: if (f.anio % 4 == 0)
+        {
+            if (f.dia >=1 && f.dia <=29)
+                es = TRUE;
+        }
+        else
+        {
+            if (f.dia >=1 && f.dia <=28)
+                es = TRUE;
+        }
+    }
+    return es;
 }
 int compararFechas(Fecha a, Fecha b) {
 
