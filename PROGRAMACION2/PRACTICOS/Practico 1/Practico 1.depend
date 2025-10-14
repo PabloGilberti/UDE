@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1759764491 source:c:\users\pgilberti\documents\ude\ude\programacion2\practicos\practico 1\main.cpp
+	<iostream>
+
+1759768981 source:c:\users\pgilberti\documents\ude\ude\programacion2\practicos\practico 1\ejercicio1.cpp
+	<iostream>
+	<stdio.h>
+
+1759780308 source:c:\users\pgilberti\documents\ude\ude\programacion2\practicos\practico 1\ejercicio2.cpp
+	<stdio.h>
+
