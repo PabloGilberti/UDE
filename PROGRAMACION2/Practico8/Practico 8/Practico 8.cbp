@@ -32,7 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="arreglo_dinamico.cpp" />
+		<Unit filename="arreglo_dinamico.h" />
+		<Unit filename="boolean.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="stringDinamico.cpp" />
+		<Unit filename="stringDinamico.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

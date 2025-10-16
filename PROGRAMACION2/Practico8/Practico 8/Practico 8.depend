@@ -14,3 +14,25 @@
 
 1760398821 c:\users\pablo gilberti\documents\ude\ude\programacion2\practico8\practico 8\boolean.h
 
+1760483969 source:c:\users\pablo\documents\ude\programacion2\practico8\practico 8\arreglo_dinamico.cpp
+	<stdio.h>
+	"arreglo_dinamico.h"
+
+1760483969 c:\users\pablo\documents\ude\programacion2\practico8\practico 8\arreglo_dinamico.h
+	"boolean.h"
+
+1760483969 c:\users\pablo\documents\ude\programacion2\practico8\practico 8\boolean.h
+
+1760483969 source:c:\users\pablo\documents\ude\programacion2\practico8\practico 8\main.cpp
+	<iostream>
+	<stdio.h>
+	"arreglo_dinamico.h"
+	"boolean.h"
+
+1760550015 source:c:\users\pablo\documents\ude\programacion2\practico8\practico 8\stringdinamico.cpp
+	"stringDinamico.h"
+	<stdio.h>
+
+1760548028 c:\users\pablo\documents\ude\programacion2\practico8\practico 8\stringdinamico.h
+	"boolean.h"
+
