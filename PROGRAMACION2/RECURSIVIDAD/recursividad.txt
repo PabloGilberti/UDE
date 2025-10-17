@@ -1,0 +1,88 @@
+1) a) PROCEDIMIENTO O FUNCION QUE SE LLAMA A SI MISMO.
+b) un paso base  consiste en una secuencia de instrucciones en las cuales el subprogrmaa no se invoca a si mismo, 
+un paso recursivo consiste en una secuencia de instrucicones que contine una o mas invocaciones 
+al propio subprograma.
+c) para evitar una recursividad infinita y para que el resultado sea el correcto
+
+**********
+2)
+a) dos pasos base y un paso recursivo
+b)
+
+funcA(0) = 1
+funcA(1) = 2
+funcA(n) = 2n + funcA(n-1)
+funcA(3) = 2.3 ¡ + funcA(3-1) = 6 + funcA(2) = 6 + 6 = 12
+funcA(2) = 2.2 + funcA(2-1) = 4 + 2 = 6
+
+3)FuncB(0)=0
+FuncB(n)=n+FuncB(n+1)
+FuncB(2)= 2+FuncB(2+1) --> 2+FuncB(3)
+FuncB(3)= 2+FuncB(3+1) --> 2+FuncB(4)
+FuncB(4)
+FuncB(5)
+FuncB(6)
+FuncB(N)
+b)Esta funcion no esta bien definida por que se aleja del paso base y nunca termina.
+
+4)
+
+int FuncA(int n)
+{
+if (n == 0)
+return 1; /* a */
+else
+if (n == 1)
+return 2; /* b */
+else
+return (2*n)+(FuncA(n-1);
+}
+b) si lo es
+c) por que necesitamos cortar la ejecucion y continue con lo que tiene pendiente.
+
+5) int Suma(int n){
+
+	if (n==0)
+		return 0;
+	else		
+		return n + Suma(n-1);
+	
+}
+
+
+6)
+
+	SumaPares: N --> N
+	SumaPares(0)=0
+	SumaPares(n)= n + SumaPares(n-2)   (n>=2 && n%2==0)
+	
+	//Precondicion debe ingresar 0 o un numero mayor igual a 2 par
+	int SumaPares(int n){
+	
+		if(n==0)
+			return 0;
+		else
+		
+		 return n + Sumapares(n-2);	
+	}
+	
+7)
+
+void Proc (int n, int & m){
+
+ if (n == 0){
+	m = 3; 
+ }else{
+ 
+	 if (n % 2 == 0)
+	   Proc (n-2, m);
+	 else
+	   Proc (n-1, m);
+	   m = m + 2;
+ }
+}
+
+	a) 1 paso base, 2 pasos recursivos
+	b) Proc(3,m)=>Proc(3-1,m) ==>Proc(2-2,m)==>Proc(0,m)==>m=3==> m=3+2 ======> &m=5
+	c)n=4, m=4;
+	
