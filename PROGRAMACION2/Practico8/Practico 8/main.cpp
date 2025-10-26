@@ -8,14 +8,14 @@ int main()
 {
     array_dinamico arre;
     int n=0;
-    printf("Ingrese un valor entero para el tamaño del arreglo dinamico:");
+    printf("Ingrese un valor entero para el tamanio del arreglo dinamico:");
     scanf("%d",&n);
 
     Crear(arre,n);
     Cargar(arre);
     Desplegar(arre);
 
-     if(boolean existe=Pertenece( arre, 5)){
+     if(Pertenece( arre, 5)){
 
         printf("\nEl valor existe en el arreglo dinamico");
 

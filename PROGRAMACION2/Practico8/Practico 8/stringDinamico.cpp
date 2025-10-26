@@ -129,9 +129,9 @@ void strcon(String &s1, String s2){
 
 // Intercambia s1 y s2
 void strswp(String &s1, String &s2);
-    hacerlo con los puntero.
+  //  hacerlo con los puntero.
 
-//Crea un string vacío (solo con el carácter ‘\0’)
+//Crea un string vacï¿½o (solo con el carï¿½cter ï¿½\0ï¿½)
 void strcrear(String &s){
 
 

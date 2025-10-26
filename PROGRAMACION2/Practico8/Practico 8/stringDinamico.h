@@ -29,7 +29,7 @@ void strcon(String &s1, String s2);
 // Intercambia s1 y s2
 void strswp(String &s1, String &s2);
 
-//Crea un string vacío (solo con el carácter ‘\0’)
+//Crea un string vacío (solo con el carácter ?\0?)
 void strcrear(String &s);
 
 //Libera la memoria ocupada por el string y lo deja nulo
