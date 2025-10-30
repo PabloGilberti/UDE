@@ -1,0 +1,59 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build (MinGW) — CMD",
+      "type": "shell",
+      "options": {
+        "shell": {
+          "executable": "cmd.exe",
+          "args": [
+            "/C"
+          ]
+        }
+      },
+      "command": "cd /D \"${workspaceFolder}\" && if not exist output mkdir output && \"C:\\MinGW\\bin\\g++.exe\" -std=c++17 -Wall -Wextra -Wpedantic -g3 *.cpp -o \"output\\main.exe\"",
+      "group": "build",
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "Clean (CMD)",
+      "type": "shell",
+      "options": {
+        "shell": {
+          "executable": "cmd.exe",
+          "args": [
+            "/C"
+          ]
+        }
+      },
+      "command": "if exist \"${workspaceFolder}\\output\" rmdir /S /Q \"${workspaceFolder}\\output\""
+    },
+    {
+      "type": "cppbuild",
+      "label": "C/C++: gcc.exe build active file",
+      "command": "C:\\MinGW\\bin\\gcc.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "compiler: C:\\MinGW\\bin\\gcc.exe"
+    }
+  ]
+}
+

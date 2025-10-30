@@ -5,14 +5,6 @@
 const int MAX = 80;
 typedef char * String;
 
-// Devuelve longitud de la cadena
-int strlar(String s);
-
-// Imprime la cadena
-void print(String &s);
-
-// Carga la cadena por teclado
-void scan(String &s);
 
 // Devuelve TRUE si s1 < s2
 boolean strmen(String s1, String s2);

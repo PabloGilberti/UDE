@@ -134,7 +134,6 @@ void strswp(String &s1, String &s2);
 //Crea un string vac�o (solo con el car�cter �\0�)
 void strcrear(String &s){
 
-
  s = new char[1];
  s [0]= '\0';
 
