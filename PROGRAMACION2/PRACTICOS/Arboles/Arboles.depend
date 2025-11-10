@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1762282933 source:c:\users\pgilberti\documents\ude\ude\programacion2\practicos\arboles\main.cpp
+	<iostream>
+	"Arbol.h"
+
+1762284002 c:\users\pgilberti\documents\ude\ude\programacion2\practicos\arboles\arbol.h
+	"boolean.h"
+
+1762282823 c:\users\pgilberti\documents\ude\ude\programacion2\practicos\arboles\boolean.h
+
+1762284009 source:c:\users\pgilberti\documents\ude\ude\programacion2\practicos\arboles\arbol.cpp
+	<iostream>
+	"Arbol.h"
+
