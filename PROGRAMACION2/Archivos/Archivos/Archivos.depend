@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1763166600 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\archivos\archivos\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<string>
+
+1763166705 source:c:\users\pablo gilberti\documents\ude\ude\programacion2\archivos\archivos\boolean.cpp
+	"boolean.h"
+
+1763166886 c:\users\pablo gilberti\documents\ude\ude\programacion2\archivos\archivos\boolean.h
+
