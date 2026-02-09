@@ -22,6 +22,7 @@ int main()
     printf("\n Nietos: %d %d %d", DarRaiz(HijoIzq(HijoIzq(cuatro))),
                                   DarRaiz(HijoDere(HijoIzq(cuatro))),
                                   DarRaiz(HijoDere(HijoDere(cuatro))));
+    printf("\n");
 
-
+    system("pause");
 }
