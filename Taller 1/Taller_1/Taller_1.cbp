@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Arbol.h" />
+		<Unit filename="Booleano.h" />
 		<Unit filename="Expresion.h" />
 		<Unit filename="ListaExpresiones.h" />
 		<Unit filename="ListaString.h" />
