@@ -10,9 +10,12 @@ typedef struct {TipoTermino discriminante;
                        }dato;
                     } Termino;
 //reducir a un cabezal.dato de entrada siempre un string, analizar con if
-Termino TER_CrearValor(int v);
-Termino TER_CrearVariable(char v);     // 'x'
-Termino TER_CrearOperador(char op);    // '+','-','*','/'
-Termino TER_CrearParentesis(char p);   // '(' o ')'
+
+typedef union {
+    int  valor;
+    char ch;
+} DatoTermino;
+
+Termino TER_Crear(TipoTermino tipo, DatoTermino dato);
 
 #endif // TERMINO_H_INCLUDED

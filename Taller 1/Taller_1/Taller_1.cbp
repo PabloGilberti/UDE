@@ -33,15 +33,24 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Arbol.h" />
+		<Unit filename="Archivo.cpp" />
+		<Unit filename="Archivo.h" />
 		<Unit filename="Booleano.h" />
+		<Unit filename="Expresion.cpp" />
 		<Unit filename="Expresion.h" />
+		<Unit filename="ListaExpresiones.cpp" />
 		<Unit filename="ListaExpresiones.h" />
+		<Unit filename="ListaString.cpp" />
 		<Unit filename="ListaString.h" />
+		<Unit filename="Programa.cpp" />
 		<Unit filename="Programa.h" />
 		<Unit filename="String.cpp" />
 		<Unit filename="String.h" />
+		<Unit filename="Termino.cpp" />
 		<Unit filename="Termino.h" />
+		<Unit filename="TipoError.cpp" />
 		<Unit filename="TipoError.h" />
+		<Unit filename="TipoTermino.cpp" />
 		<Unit filename="TipoTermino.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>

@@ -1,6 +1,6 @@
 #ifndef LISTAEXPRESIONES_H_INCLUDED
 #define LISTAEXPRESIONES_H_INCLUDED
-#include "Expresion.h"
+
 
 typedef struct NodoLis{ Expresion info;
                         NodoLis *& sig;

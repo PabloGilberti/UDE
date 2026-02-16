@@ -10,12 +10,66 @@ typedef struct NodoArb{ Termino info;
 
  typedef nodoA * Arbol;
 
-Arbol   ARB_CrearVacio();
-Booleaneano ARB_EsVacio(Arbol a);
+// Retorna árbol vacío (NULL)
+Arbol ARB_CrearVacio();
 
-Arbol  ARB_CrearNodo(Termino t, Arbol izq, Arbol der);
-Arbol  ARB_Copiar(Arbol a);
-void   ARB_Liberar(Arbol& a);
+// Devuelve true si a == NULL
+Boolean  ARB_EsVacio(Arbol a);
+
+// Crea un nodo con "info" y sus hijos (reserva memoria)
+Arbol ARB_CrearNodo(Termino info, Arbol izq, Arbol der);
+
+
+/* ============================
+   Gestión de memoria
+   ============================ */
+
+// Copia profunda del árbol (se usa en comando compuesta)
+Arbol ARB_Copiar(Arbol a);
+
+// Libera todo el árbol (postorden) y deja a = NULL
+void  ARB_Liberar(Arbol& a);
+
+
+/* ============================
+   Mostrar (impresión)
+   ============================ */
+
+// Imprime el árbol como expresión (con paréntesis para reflejar estructura)
+// Ej: ( (12 - x) * x )
+void  ARB_Mostrar(Arbol a);
+
+
+/* ============================
+   Evaluación (calcular)
+   ============================ */
+
+// Evalúa el árbol con un valor para x.
+// Devuelve OK o error (por ejemplo división entre 0).
+TipoError ARB_Evaluar(Arbol a, int valorX, int& resultado);
+
+
+/* ============================
+   Comparación (iguales)
+   ============================ */
+
+// Devuelve true si dos árboles son sintácticamente iguales:
+// misma estructura y mismo contenido en cada nodo.
+Boolean  ARB_Iguales(Arbol a, Arbol b);
+
+
+/* ============================
+   Persistencia (guardar / recuperar)
+   ============================ */
+
+// Guarda el árbol en un archivo (serialización).
+// - Debe devolver ERR_ARCHIVO_EXISTE si ya existe (si esa es tu regla).
+TipoError ARB_GuardarEnArchivo(Arbol a, const char* nombreArchivo);
+
+// Carga un árbol desde un archivo (deserialización).
+// - Debe devolver ERR_ARCHIVO_NO_EXISTE si no existe.
+TipoError ARB_CargarDesdeArchivo(Arbol& a, const char* nombreArchivo);
+
 //evaluar arbol(calcular expresion del arbol)puede  devolver un double float
 
 //modulo archivo
