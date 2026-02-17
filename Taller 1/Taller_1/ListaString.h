@@ -10,11 +10,17 @@ typedef NodoS * ListaString;
 
 // operaciones base
 void   LS_Crear(ListaString& L);
-bool   LS_EsVacia(ListaString L);
+
+Boolean   LS_EsVacia(ListaString L);
+
 int    LS_Cantidad(ListaString L);
-String LS_EnPos(ListaString L, int pos);                  //leer lo ue viene en la posicion
+
+String LS_EnPos(ListaString L, int pos);//leer lo ue viene en la posicion
+
 void   LS_AgregarFinal(ListaString& L, const char* s); // copia dinámica
+
 void   LS_Split(const char* linea, ListaString& L);//Cortar un string
+
 void   LS_Liberar(ListaString& L);
 
 
