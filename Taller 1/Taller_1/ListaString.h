@@ -1,8 +1,9 @@
 #ifndef LISTASTRING_H_INCLUDED
 #define LISTASTRING_H_INCLUDED
 #include "String.h"
+#include "Booleano.h"
 
-typedef struct nodoS{ string palabra;
+typedef struct nodoS{String palabra;
                       nodoS * sig;} NodoS;
 
 typedef NodoS * ListaString;
