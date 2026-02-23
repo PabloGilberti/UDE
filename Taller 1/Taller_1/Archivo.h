@@ -2,10 +2,8 @@
 #define ARCHIVO_H_INCLUDED
 #include "String.h"
 #include "Booleano.h"
-#include <stdio.h>
 
-
-void Agregar(Stringnomarch, String expresion);
+void Agregar(String nomarch, String expresion);
 
 Boolean Existe (String nomArch);
 
@@ -18,6 +16,5 @@ int Largo (String nomArch);
 int K_esimo (String nomArch, int k);
 
 void Desplegar (String nomArch);
-
 
 #endif // ARCHIVO_H_INCLUDED

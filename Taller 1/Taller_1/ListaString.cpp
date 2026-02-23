@@ -1,4 +1,5 @@
 #include "ListaString.h"
+#include <cstring>
 
 
 void   LS_Crear(ListaString &L){
@@ -10,7 +11,7 @@ void   LS_Crear(ListaString &L){
 
 Boolean   LS_EsVacia(ListaString L){
 
-            boolean es = FALSE;
+            Boolean es = FALSE;
 
             if (L == NULL)
                 es = TRUE;
@@ -35,7 +36,7 @@ int    LS_Cantidad(ListaString L){
 //leer lo ue viene en la posicion
 String LS_EnPos(ListaString L, int pos){
 
-    int cant = LS_Cantidad(L)
+    int cant = LS_Cantidad(L);
     int i=1;
     NodoS * aux = L;
     if (pos>cant ){
@@ -44,18 +45,19 @@ String LS_EnPos(ListaString L, int pos){
     }else{
         while( i <= pos){
         aux = aux->sig;
-        i++:
+        i++;
         }
         return aux->palabra;
     }
 };
 
-void   LS_AgregarFinal(ListaString& L, const char* s){ // copia dinámica
+void   LS_AgregarFinal(ListaString &L, const char* s){ // copia dinámica
  // Crear nodo nuevo
     NodoS * nuevo = new NodoS;
 
     // Reservar memoria para el string
-    nuevo->palabra = s;
+    nuevo->palabra = new char[strlar(s) + 1];
+    strcop(nuevo->palabra, s);
     nuevo->sig = NULL;
 
     if (L == NULL)

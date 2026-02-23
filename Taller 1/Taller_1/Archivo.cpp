@@ -6,7 +6,8 @@ void Agregar (String nomArch, String expresion){
  fclose (f);
 }
 Boolean Existe (String nomArch){
- Boolean existeArchivo = true;
+
+ Boolean existeArchivo = TRUE;
  FILE * f = fopen (nomArch, "rb");
  if (f == NULL)
  existeArchivo = FALSE;
@@ -25,7 +26,7 @@ Boolean Vacio (String nomArch)
  return archivoVacio;
 }
 Boolean Pertenece (String nomArch, int entero){
- boolean esta = FALSE;
+ Boolean esta = FALSE;
  FILE * f = fopen (nomArch, "rb");
  int buffer;
  fread (&buffer, sizeof(int), 1, f);
