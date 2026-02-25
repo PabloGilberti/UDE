@@ -22,7 +22,7 @@ void   LS_AgregarFinal(ListaString& L, String s); // copia dinámica
 
 void   LS_Split(String linea, ListaString& L);//Cortar un string
 
-void   LS_Liberar(ListaString& L);
+void   LS_Liberar(ListaString &L);
 
 
 #endif // LISTASTRING_H_INCLUDED

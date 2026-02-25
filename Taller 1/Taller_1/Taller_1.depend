@@ -97,3 +97,44 @@
 	"String.h"
 	"Booleano.h"
 
+1771985941 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\archivo.cpp
+	"Archivo.h"
+
+1771985941 c:\users\pablo\documents\github\ude\taller 1\taller_1\archivo.h
+	"String.h"
+	"Booleano.h"
+
+1771985942 c:\users\pablo\documents\github\ude\taller 1\taller_1\string.h
+	"Booleano.h"
+
+1771985941 c:\users\pablo\documents\github\ude\taller 1\taller_1\booleano.h
+	<stdio.h>
+
+1771985941 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\expresion.cpp
+
+1771985941 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\listaexpresiones.cpp
+
+1771986697 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\listastring.cpp
+	"ListaString.h"
+
+1771986427 c:\users\pablo\documents\github\ude\taller 1\taller_1\listastring.h
+	"String.h"
+	"Booleano.h"
+
+1771985942 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\programa.cpp
+
+1771985942 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\string.cpp
+	"String.h"
+
+1771985942 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\termino.cpp
+	"Termino.h"
+
+1771985942 c:\users\pablo\documents\github\ude\taller 1\taller_1\termino.h
+	"TipoTermino.h"
+
+1771985942 c:\users\pablo\documents\github\ude\taller 1\taller_1\tipotermino.h
+
+1771985942 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\tipoerror.cpp
+
+1771985942 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\tipotermino.cpp
+
