@@ -5,11 +5,13 @@
 1770493741 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\string.cpp
 	<string.h>
 
-1770667428 source:c:\users\pablo\documents\ude\taller 1\taller_1\main.cpp
+1771891179 source:c:\users\pablo\documents\ude\taller 1\taller_1\main.cpp
 	<iostream>
+	"ListaString.h"
+	<stdio.h>
 
-1771873816 source:c:\users\pablo\documents\ude\taller 1\taller_1\string.cpp
-	<string.h>
+1771891010 source:c:\users\pablo\documents\ude\taller 1\taller_1\string.cpp
+	"String.h"
 
 1770854047 source:c:\users\usuario\documents\github\ude\taller 1\taller_1\expresion.cpp
 
@@ -82,17 +84,16 @@
 	"String.h"
 	"Booleano.h"
 
-1771873816 c:\users\pablo\documents\ude\taller 1\taller_1\string.h
+1771890821 c:\users\pablo\documents\ude\taller 1\taller_1\string.h
 	"Booleano.h"
 
 1771864984 c:\users\pablo\documents\ude\taller 1\taller_1\booleano.h
 	<stdio.h>
 
-1771873899 source:c:\users\pablo\documents\ude\taller 1\taller_1\listastring.cpp
+1771890155 source:c:\users\pablo\documents\ude\taller 1\taller_1\listastring.cpp
 	"ListaString.h"
-	<cstring>
 
-1771864984 c:\users\pablo\documents\ude\taller 1\taller_1\listastring.h
+1771889859 c:\users\pablo\documents\ude\taller 1\taller_1\listastring.h
 	"String.h"
 	"Booleano.h"
 

@@ -1,6 +1,7 @@
 #include "ListaString.h"
 
 
+
 void   LS_Crear(ListaString &L){
 
 
@@ -50,12 +51,12 @@ String LS_EnPos(ListaString L, int pos){
     }
 };
 
-void   LS_AgregarFinal(ListaString &L, const char* s){ // copia dinámica
+void   LS_AgregarFinal(ListaString &L, String s){ // copia dinámica
  // Crear nodo nuevo
     NodoS * nuevo = new NodoS;
 
     // Reservar memoria para el string
-    nuevo->palabra = new char[strlar(s) + 1];
+    strcrear(nuevo->palabra);
 
 /*
     strlar(s) devuelve el largo de la cadena (sin contar '\0').
@@ -88,7 +89,7 @@ void   LS_AgregarFinal(ListaString &L, const char* s){ // copia dinámica
 
 }
 
-void LS_Split(const char* linea, ListaString &L){//Cortar el string
+void LS_Split(String linea, ListaString &L){//Cortar el string
     // Inicializar lista vacía
     L = NULL;
 
@@ -126,7 +127,7 @@ void LS_Split(const char* linea, ListaString &L){//Cortar el string
         int tamano = fin - inicio;
 
         //Crear un especie de  buffer temporal para copiar el split
-        char* palabra = new char[tamano + 1];
+        String palabra = new char[tamano + 1];
         //copia caracter por caracter
         for (int j = 0; j < tamano; j++)
         {

@@ -4,9 +4,10 @@
  const int MAX =80;
  typedef char * String;
 
+void strcrear (String &s);
 
 //Devuelve la longitud de la cadena.
-int strlar( const char * s);
+int strlar(String s);
 
 //Imprime la cadena por pantalla.
 void print(String &s);
@@ -21,12 +22,13 @@ Boolean strmen(String s1, String s2);
 Boolean streq(String s1, String s2);
 
 //Copia s1 en s2.
-void strcop(char* destino, const char* origen);
+void strcop(String &destino, String origen);
 
 //Concatena s1 y s2 en s3.
 void strcon(String &s1, String s2);
 
 //Intercambia s1 y s2.
 void strswp(String &s1, String &s2);
+void strdestruir (String &s);
 
 #endif // STRING_H_INCLUDED
