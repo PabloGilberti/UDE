@@ -1,5 +1,7 @@
 #ifndef TIPOTERMINO_H_INCLUDED
 #define TIPOTERMINO_H_INCLUDED
+#include "Booleano.h"
+#include "TipoError.h"
 typedef enum {
                 TERMINO_VALOR,      // usa dato.valor
                 TERMINO_VARIABLE,   // usa dato.variable

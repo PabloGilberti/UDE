@@ -17,7 +17,7 @@ Termino TER_Crear(TipoTermino tipo, DatoTermino dato)
             break;
 
         case TERMINO_VARIABLE:
-            t.dato.variables = dato.ch;
+            t.dato.variable = dato.ch;
             break;
 
         case TERMINO_OPERADOR:

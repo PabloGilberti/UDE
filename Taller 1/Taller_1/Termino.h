@@ -4,7 +4,7 @@
 
 typedef struct {TipoTermino discriminante;
                 union{ int valor;
-                       char variables;
+                       char variable;
                        char operador;
                        char parentesis;
                        }dato;
