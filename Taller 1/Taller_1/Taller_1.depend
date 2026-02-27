@@ -1,9 +1,11 @@
 # depslib dependency file v1.0
-1584205420 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\main.cpp
-	<iostream>
+1772149967 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\main.cpp
+	<stdio.h>
+	"ListaString.h"
+	"String.h"
 
-1770493741 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\string.cpp
-	<string.h>
+1772145067 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\string.cpp
+	"String.h"
 
 1771891179 source:c:\users\pablo\documents\ude\taller 1\taller_1\main.cpp
 	<iostream>
@@ -43,19 +45,23 @@
 
 1771286523 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\listaexpresiones.cpp
 
-1771286523 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\listastring.cpp
+1772061950 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\listastring.cpp
+	"ListaString.h"
 
 1771286523 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\programa.cpp
 
-1771286523 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\termino.cpp
+1772140836 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\termino.cpp
 	"Termino.h"
 
-1771286523 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\termino.h
+1772140836 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\termino.h
 	"TipoTermino.h"
 
-1770496727 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\tipotermino.h
+1772140836 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\tipotermino.h
+	"Booleano.h"
+	"TipoError.h"
 
-1771286523 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\tipoerror.cpp
+1772140836 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\tipoerror.cpp
+	"TipoError.h"
 
 1771286523 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\tipotermino.cpp
 
@@ -137,4 +143,33 @@
 1771985942 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\tipoerror.cpp
 
 1771985942 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\tipotermino.cpp
+
+1772061950 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\archivo.cpp
+	"Archivo.h"
+
+1772061950 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\archivo.h
+	"String.h"
+	"Booleano.h"
+
+1772061950 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\string.h
+	"Booleano.h"
+
+1771286523 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\booleano.h
+	<stdio.h>
+
+1772061950 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\listastring.h
+	"String.h"
+	"Booleano.h"
+
+1772140836 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\tipoerror.h
+	"String.h"
+
+1772143529 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\arbol.cpp
+	<cstdio>
+	"Arbol.h"
+	"TipoTermino.h"
+	"Booleano.h"
+
+1771286523 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\arbol.h
+	"Termino.h"
 

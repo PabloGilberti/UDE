@@ -1,6 +1,6 @@
 #include <cstdio>
 #include "Arbol.h"
-#include "TipoTermino.h"   // TT_VALOR, TT_VARIABLE, TT_OPERADOR (ajustar si se llaman distinto)
+#include "TipoTermino.h"   // TERMINO_VALOR, TERMINO_VARIABLE, TERMINO_OPERADOR, TERMINO_PARENTESIS (ajustar si se llaman distinto)
 #include "Booleano.h"      // Boolean, TRUE/FALSE (ajustar si corresponde)
 
 /* =========================
@@ -119,7 +119,7 @@ void ARB_Mostrar(Arbol a)
    Evaluar
    ========================= */
 
-TipoError ARB_Evaluar(Arbol a, int valorX, int& resultado)
+TipoError ARB_Evaluar(Arbol a, int valorX, int &resultado)
 {
     if (a == NULL)
     {

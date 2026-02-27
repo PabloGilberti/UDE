@@ -56,3 +56,19 @@ aux[i] = '\0';
 strcop (s,aux);
 strdestruir (aux);
 }
+
+Boolean streq(String s1, String s2){
+    int i = 0;
+
+    while (s1[i] != '\0' && s2[i] != '\0')
+    {
+        if (s1[i] != s2[i])
+            return FALSE;
+        i++;
+    }
+
+    if (s1[i] == '\0' && s2[i] == '\0')
+        return TRUE;
+
+    return FALSE;
+}
