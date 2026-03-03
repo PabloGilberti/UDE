@@ -3,6 +3,7 @@
 #include "String.h"
 
 typedef enum{
+
     OK = 0,
 
     // Errores generales de parámetros / sintaxis
@@ -31,6 +32,6 @@ typedef enum{
 } TipoError;
 
 // Para mostrar mensajes claros
-void Error(TipoError e);
+void Dar_Error(TipoError e);
 
 #endif

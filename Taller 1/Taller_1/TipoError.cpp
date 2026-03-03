@@ -1,6 +1,6 @@
 #include "TipoError.h"
 
-void Error(TipoError e){
+void Dar_Error(TipoError e){
    switch (e)
     {
         case OK:

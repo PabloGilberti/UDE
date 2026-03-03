@@ -41,7 +41,7 @@ int main()
 
     return 0;
 }
-*/
+
 #include <stdio.h>
 
 #include "String.h"
@@ -61,7 +61,7 @@ void probarString()
 
     printf("Largo: %d\n", strlar(s));
     printf("Contenido: ");
-    printf(s);
+    printf (s);
     printf("\n");
 
     strdestruir(s);
@@ -110,18 +110,18 @@ void probarErrores()
     printf("\n--- PRUEBA TipoError ---\n");
     printf("Mostrando mensajes de varios errores:\n\n");
 
-    Error(OK);
-    Error(ERR_CANT_PARAM);
-    Error(ERR_PARAMETRO);
-    Error(ERR_INDICE_FORMATO);
-    Error(ERR_INDICE_NOEXISTE);
-    Error(ERR_OPERADOR);
-    Error(ERR_MEMORIA_VACIA);
-    Error(ERR_NOMBRE_ARCHIVO);
-    Error(ERR_ARCHIVO_EXISTE);
-    Error(ERR_ARCHIVO_NOEXISTE);
-    Error(ERR_ARCHIVO_IO);
-    Error(ERR_DIV_CERO);
+    Dar_Error(OK);
+    Dar_Error(ERR_CANT_PARAM);
+    Dar_Error(ERR_PARAMETRO);
+    Dar_Error(ERR_INDICE_FORMATO);
+    Dar_Error(ERR_INDICE_NOEXISTE);
+    Dar_Error(ERR_OPERADOR);
+    Dar_Error(ERR_MEMORIA_VACIA);
+    Dar_Error(ERR_NOMBRE_ARCHIVO);
+    Dar_Error(ERR_ARCHIVO_EXISTE);
+    Dar_Error(ERR_ARCHIVO_NOEXISTE);
+    Dar_Error(ERR_ARCHIVO_IO);
+    Dar_Error(ERR_DIV_CERO);
 }
 
 void mostrarTermino(Termino t)
@@ -204,5 +204,431 @@ int main()
         }
     }
 
+    return 0;
+}
+*/
+// main.cpp  (solo printf/scanf)
+#include <stdio.h>
+
+#include "Booleano.h"
+#include "String.h"
+#include "ListaString.h"
+#include "TipoError.h"
+#include "Arbol.h"
+#include "Termino.h"
+#include "TipoTermino.h"
+
+// =====================================
+// CONFIG: índice base de ListaString
+// 0 si LS_EnPos(L,0) es el primero
+// 1 si LS_EnPos(L,1) es el primero
+// =====================================
+const int BASE_INDEX = 0;
+
+// =====================================
+// Helpers de consola
+// =====================================
+void limpiarEnter()
+{
+    int c;
+    do { c = getchar(); } while (c != '\n' && c != EOF);
+}
+
+void cortarEnCRLF(String &s)
+{
+    if (s == NULL) return;
+    int i = 0;
+    while (s[i] != '\0')
+    {
+        if (s[i] == '\r' || s[i] == '\n' || s[i] == '\t')
+        {
+            s[i] = '\0';
+            return;
+        }
+        i++;
+    }
+}
+
+char aMinuscula(char c)
+{
+    if (c >= 'A' && c <= 'Z') return (char)(c - 'A' + 'a');
+    return c;
+}
+
+Boolean streq_ci_lit(String s, const char* lit)
+{
+    if (s == NULL || lit == NULL) return FALSE;
+    int i = 0;
+    while (s[i] != '\0' && lit[i] != '\0')
+    {
+        if (aMinuscula(s[i]) != aMinuscula(lit[i])) return FALSE;
+        i++;
+    }
+    return (s[i] == '\0' && lit[i] == '\0') ? TRUE : FALSE;
+}
+
+// =====================================
+// Helpers numéricos / términos
+// =====================================
+Boolean es_numero(String s)
+{
+    if (s == NULL) return FALSE;
+    cortarEnCRLF(s);
+
+    int i = 0;
+    if (s[i] == '-') i++;
+    if (s[i] == '\0') return FALSE;
+
+    while (s[i] != '\0')
+    {
+        if (s[i] < '0' || s[i] > '9') return FALSE;
+        i++;
+    }
+    return TRUE;
+}
+
+int a_int(String s)
+{
+    cortarEnCRLF(s);
+
+    int i = 0, sign = 1;
+    if (s[i] == '-') { sign = -1; i++; }
+
+    int val = 0;
+    while (s[i] != '\0')
+    {
+        val = val * 10 + (s[i] - '0');
+        i++;
+    }
+    return sign * val;
+}
+
+Boolean es_operador_valido(String op)
+{
+    if (op == NULL) return FALSE;
+    cortarEnCRLF(op);
+    if (op[1] != '\0') return FALSE;
+
+    return (op[0] == '+' || op[0] == '-' || op[0] == '*' || op[0] == '/') ? TRUE : FALSE;
+}
+
+Termino TerminoValor(int v)
+{
+    Termino t;
+    t.discriminante = TERMINO_VALOR;
+    t.dato.valor = v;
+    return t;
+}
+
+Termino TerminoVariable(char v)
+{
+    Termino t;
+    t.discriminante = TERMINO_VARIABLE;
+    t.dato.variable = v;
+    return t;
+}
+
+Termino TerminoOperador(char op)
+{
+    Termino t;
+    t.discriminante = TERMINO_OPERADOR;
+    t.dato.operador = op;
+    return t;
+}
+
+TipoError tokenA_Termino(String tok, Termino &t)
+{
+    if (tok == NULL) return ERR_PARAMETRO;
+    cortarEnCRLF(tok);
+
+    if (tok[1] == '\0' && (tok[0] == 'x' || tok[0] == 'X'))
+    {
+        t = TerminoVariable('x');
+        return OK;
+    }
+
+    if (es_numero(tok))
+    {
+        t = TerminoValor(a_int(tok));
+        return OK;
+    }
+
+    return ERR_PARAMETRO;
+}
+
+// =====================================
+// TESTS
+// =====================================
+void testString()
+{
+    printf("\n--- TEST String ---\n");
+    String s;
+    strcrear(s);
+
+    printf("Ingrese una linea: ");
+    scan(s);
+    cortarEnCRLF(s);
+
+    printf("Largo: %d\n", strlar(s));
+    printf("Contenido: ");
+    printf(s);
+    printf("\n");
+
+    strdestruir(s);
+}
+
+void testSplit()
+{
+    printf("\n--- TEST ListaString / Split ---\n");
+
+    ListaString L;
+    LS_Crear(L);
+
+    String linea;
+    strcrear(linea);
+
+    printf("Ingrese una linea:\n> ");
+    scan(linea);
+    cortarEnCRLF(linea);
+
+    LS_Split(linea, L);
+
+    int cant = LS_Cantidad(L);
+    printf("Cantidad de tokens: %d\n", cant);
+
+    for (int i = 0; i < cant; i++)
+    {
+        String tok = LS_EnPos(L, i + BASE_INDEX);
+        if (tok != NULL)
+            printf("Token %d: %s\n", i, tok);
+    }
+
+    LS_Liberar(L);
+    strdestruir(linea);
+}
+
+void testErrores()
+{
+    printf("\n--- TEST TipoError ---\n");
+    // Mostramos varios, ajustá si tu enum tiene otros nombres:
+    Dar_Error(OK);
+    Dar_Error(ERR_CANT_PARAM);
+    Dar_Error(ERR_PARAMETRO);
+    Dar_Error(ERR_OPERADOR);
+    Dar_Error(ERR_DIV_CERO);
+
+    // Si este existe en tu TipoError.h, genial; si no, comentarlo:
+    // Error(ERR_MEMORIA_VACIA);
+}
+
+// =====================================
+// ARBOL: crear desde comando Compuesta t1 op t2
+// =====================================
+TipoError crearArbolDesdeLinea(String linea, Arbol &A)
+{
+    ListaString L;
+    LS_Crear(L);
+    LS_Split(linea, L);
+
+    int cant = LS_Cantidad(L);
+    if (cant == 0)
+    {
+        LS_Liberar(L);
+        return ERR_CANT_PARAM;
+    }
+
+    String cmd = LS_EnPos(L, 0 + BASE_INDEX);
+    cortarEnCRLF(cmd);
+
+    if (!streq_ci_lit(cmd, "compuesta"))
+    {
+        LS_Liberar(L);
+        return ERR_PARAMETRO; // si tenés ERR_COMANDO o ERR_LEXICO, mejor
+    }
+
+    if (cant != 4)
+    {
+        LS_Liberar(L);
+        return ERR_CANT_PARAM;
+    }
+
+    String s1  = LS_EnPos(L, 1 + BASE_INDEX);
+    String sop = LS_EnPos(L, 2 + BASE_INDEX);
+    String s2  = LS_EnPos(L, 3 + BASE_INDEX);
+
+    cortarEnCRLF(s1);
+    cortarEnCRLF(sop);
+    cortarEnCRLF(s2);
+
+    if (!es_operador_valido(sop))
+    {
+        LS_Liberar(L);
+        return ERR_OPERADOR;
+    }
+
+    Termino t1, t2;
+    TipoError e1 = tokenA_Termino(s1, t1);
+    if (e1 != OK) { LS_Liberar(L); return e1; }
+
+    TipoError e2 = tokenA_Termino(s2, t2);
+    if (e2 != OK) { LS_Liberar(L); return e2; }
+
+    // liberar árbol anterior si existía
+    ARB_Liberar(A);
+
+    Arbol izq = ARB_CrearNodo(t1, NULL, NULL);
+    Arbol der = ARB_CrearNodo(t2, NULL, NULL);
+    Termino top = TerminoOperador(sop[0]);
+    A = ARB_CrearNodo(top, izq, der);
+
+    LS_Liberar(L);
+    return OK;
+}
+
+void cargarEjemplo(Arbol &A)
+{
+    ARB_Liberar(A);
+    Arbol izq = ARB_CrearNodo(TerminoVariable('x'), NULL, NULL);
+    Arbol der = ARB_CrearNodo(TerminoValor(5), NULL, NULL);
+    A = ARB_CrearNodo(TerminoOperador('+'), izq, der);
+}
+
+void menuArbol(Arbol &A, int valorX)
+{
+    int op = -1;
+
+    while (op != 0)
+    {
+        printf("\n--- MENU ARBOL ---\n");
+        printf("1) Crear arbol con comando: Compuesta t1 op t2\n");
+        printf("2) Cargar ejemplo (x + 5)\n");
+        printf("3) Mostrar arbol\n");
+        printf("4) Evaluar arbol\n");
+        printf("5) Liberar arbol\n");
+        printf("0) Volver\n");
+        printf("Opcion: ");
+
+        scanf("%d", &op);
+        limpiarEnter();
+
+        if (op == 1)
+        {
+            String linea;
+            strcrear(linea);
+
+            printf("\nIngrese comando:\n> ");
+            scan(linea);
+            cortarEnCRLF(linea);
+
+            TipoError e = crearArbolDesdeLinea(linea, A);
+            Dar_Error(e);
+
+            if (e == OK)
+            {
+                printf("Arbol: ");
+                ARB_Mostrar(A);
+                printf("\n");
+            }
+
+            strdestruir(linea);
+        }
+        else if (op == 2)
+        {
+            cargarEjemplo(A);
+            Dar_Error(OK);
+            printf("Arbol: ");
+            ARB_Mostrar(A);
+            printf("\n");
+        }
+        else if (op == 3)
+        {
+            if (ARB_EsVacio(A))
+            {
+                // si no existe en tu enum, cambialo por otro, o usa ERR_PARAMETRO
+                Dar_Error(ERR_MEMORIA_VACIA);
+            }
+            else
+            {
+                Dar_Error(OK);
+                printf("Arbol: ");
+                ARB_Mostrar(A);
+                printf("\n");
+            }
+        }
+        else if (op == 4)
+        {
+            if (ARB_EsVacio(A))
+            {
+                Dar_Error(ERR_MEMORIA_VACIA);
+            }
+            else
+            {
+                int res = 0;
+                TipoError e = ARB_Evaluar(A, valorX, res);
+                Dar_Error(e);
+                if (e == OK)
+                    printf("Resultado (x=%d): %d\n", valorX, res);
+            }
+        }
+        else if (op == 5)
+        {
+            ARB_Liberar(A);
+            Dar_Error(OK);
+            printf("Arbol liberado.\n");
+        }
+        else if (op == 0)
+        {
+            // volver
+        }
+        else
+        {
+            printf("Opcion invalida.\n");
+        }
+    }
+}
+
+// =====================================
+// MAIN principal: todo junto
+// =====================================
+int main()
+{
+    printf("=== TEST COMPLETO (String / ListaString / TipoError / Arbol) ===\n");
+
+    int valorX = 0;
+    printf("Valor para x: ");
+    scanf("%d", &valorX);
+    limpiarEnter();
+
+    Arbol A = ARB_CrearVacio();
+
+    int op = -1;
+    while (op != 0)
+    {
+        printf("\n=============================\n");
+        printf(" MENU PRINCIPAL\n");
+        printf("=============================\n");
+        printf("1) Probar String\n");
+        printf("2) Probar Split (ListaString)\n");
+        printf("3) Probar TipoError\n");
+        printf("4) Menu Arbol (crear/mostrar/evaluar/liberar)\n");
+        printf("0) Salir\n");
+        printf("Opcion: ");
+
+        scanf("%d", &op);
+        limpiarEnter();
+
+        switch (op)
+        {
+            case 1: testString(); break;
+            case 2: testSplit(); break;
+            case 3: testErrores(); break;
+            case 4: menuArbol(A, valorX); break;
+            case 0: break;
+            default: printf("Opcion invalida.\n"); break;
+        }
+    }
+
+    ARB_Liberar(A);
+    printf("Fin.\n");
     return 0;
 }
