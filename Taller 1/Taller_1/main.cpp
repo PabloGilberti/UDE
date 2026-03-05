@@ -206,7 +206,7 @@ int main()
 
     return 0;
 }
-*/
+
 // main.cpp  (solo printf/scanf)
 #include <stdio.h>
 
@@ -629,6 +629,339 @@ int main()
     }
 
     ARB_Liberar(A);
+    printf("Fin.\n");
+    return 0;
+}
+*/
+#include <cstdio>
+
+#include "Comando.h"
+#include "TipoError.h"
+
+#include "String.h"
+#include "ListaString.h"
+
+#include "TipoTermino.h"
+#include "Termino.h"
+#include "Arbol.h"
+
+#include "ListaExpresiones.h"
+
+// -------------------- Helpers --------------------
+
+char aMinuscula(char c)
+{
+    if (c >= 'A' && c <= 'Z') return c + ('a' - 'A');
+    return c;
+}
+
+Boolean igualesSinCase(String s, char* palabra)
+{
+    int i = 0;
+    while (s[i] != '\0' && palabra[i] != '\0')
+    {
+        if (aMinuscula(s[i]) != aMinuscula(palabra[i])) return FALSE;
+        i++;
+    }
+    return (s[i] == '\0' && palabra[i] == '\0') ? TRUE : FALSE;
+}
+
+Boolean esX(String s)
+{
+    if (s == NULL) return FALSE;
+    return (s[0] == 'x' && s[1] == '\0') ? TRUE : FALSE;
+}
+
+Boolean esEntero(String s)
+{
+    if (s == NULL) return FALSE;
+
+    int i = 0;
+    if (s[0] == '-') i = 1;  // si no admiten negativos, quitá esto
+    if (s[i] == '\0') return FALSE;
+
+    while (s[i] != '\0')
+    {
+        if (s[i] < '0' || s[i] > '9') return FALSE;
+        i++;
+    }
+    return TRUE;
+}
+
+Boolean operadorValido(char op)
+{
+    return (op == '+' || op == '-' || op == '*' || op == '/') ? TRUE : FALSE;
+}
+
+TipoError crearTerminoDesdeToken(String tok, Termino& t)
+{
+    DatoTermino d;
+
+    if (esX(tok) == TRUE)
+    {
+        d.ch = 'x';
+        t = TER_Crear(TERMINO_VARIABLE, d);
+        return OK;
+    }
+
+    if (esEntero(tok) == TRUE)
+    {
+        int num = 0;
+        sscanf(tok, "%d", &num);
+        d.valor = num;
+        t = TER_Crear(TERMINO_VALOR, d);
+        return OK;
+    }
+
+    return ERR_PARAMETRO;
+}
+
+/*
+    Tokens 0-based:
+      ingresar simple <n|x>
+        [0]=ingresar, [1]=simple, [2]=param
+
+      ingresar compuesta <t1> <op> <t2>
+        [0]=ingresar, [1]=compuesta, [2]=t1, [3]=op, [4]=t2
+*/
+TipoError construirArbolDesdeIngreso(ListaString tokens, int cant, Arbol& a)
+{
+    a = ARB_CrearVacio();
+
+    if (cant < 2) return ERR_CANT_PARAM;
+
+    String tipo = LS_EnPos(tokens, 1);
+
+    // ---- simple ----
+    if (igualesSinCase(tipo, (char*)"simple") == TRUE)
+    {
+        if (cant != 3) return ERR_CANT_PARAM;
+
+        Termino t;
+        TipoError e = crearTerminoDesdeToken(LS_EnPos(tokens, 2), t);
+        if (e != OK) return e;
+
+        a = ARB_CrearNodo(t, NULL, NULL);
+        return OK;
+    }
+
+    // ---- compuesta ----
+    if (igualesSinCase(tipo, (char*)"compuesta") == TRUE)
+    {
+        if (cant != 5) return ERR_CANT_PARAM;
+
+        String tok1  = LS_EnPos(tokens, 2);
+        String tokOp = LS_EnPos(tokens, 3);
+        String tok2  = LS_EnPos(tokens, 4);
+
+        // operador debe ser 1 caracter
+        if (tokOp == NULL || tokOp[0] == '\0' || tokOp[1] != '\0')
+            return ERR_OPERADOR;
+
+        char op = tokOp[0];
+        if (operadorValido(op) == FALSE)
+            return ERR_OPERADOR;
+
+        Termino t1, t2;
+        TipoError e1 = crearTerminoDesdeToken(tok1, t1);
+        TipoError e2 = crearTerminoDesdeToken(tok2, t2);
+        if (e1 != OK) return e1;
+        if (e2 != OK) return e2;
+
+        // termino operador
+        DatoTermino d;
+        d.ch = op;
+        Termino top = TER_Crear(TERMINO_OPERADOR, d);
+
+        // armar arbol
+        Arbol izq = ARB_CrearNodo(t1, NULL, NULL);
+        Arbol der = ARB_CrearNodo(t2, NULL, NULL);
+        a = ARB_CrearNodo(top, izq, der);
+
+        return OK;
+    }
+
+    return ERR_PARAMETRO;
+}
+
+// -------------------- MAIN --------------------
+
+int main()
+{
+    printf("=== SISTEMA DE COMANDOS ===\n");
+    printf("Permitidos: ingresar / mostrar / calcular / salir\n\n");
+
+    printf("Ejemplos:\n");
+    printf("  ingresar simple 4\n");
+    printf("  ingresar simple x\n");
+    printf("  ingresar compuesta 4 + 5\n");
+    printf("  ingresar compuesta x * 3\n");
+    printf("  mostrar\n");
+    printf("  calcular 1 10\n");
+    printf("  salir\n\n");
+
+    ListaExpresiones mem;
+    crearLista(mem);
+
+    String linea;
+    strcrear(linea);
+
+    while (TRUE)
+    {
+        printf("> ");
+        scan(linea);
+
+        ListaString tokens;
+        LS_Crear(tokens);
+        LS_Split(linea, tokens);
+
+        int cant = LS_Cantidad(tokens);
+        if (cant == 0)
+        {
+            LS_Liberar(tokens);
+            continue;
+        }
+
+        // ✅ 0-based: el comando está en pos 0
+        String palabraCmd = LS_EnPos(tokens, 0);
+
+        // DEBUG opcional:
+        // printf("DEBUG cmd='%s'\n", palabraCmd);
+
+        TipoComando cmd = reconocerComando(palabraCmd);
+
+        // ---- SALIR ----
+        if (cmd == CMD_SALIR)
+        {
+            LS_Liberar(tokens);
+            break;
+        }
+
+        // ---- MOSTRAR ----
+        if (cmd == CMD_MOSTRAR)
+        {
+            if (cant != 1)
+            {
+                Dar_Error(ERR_CANT_PARAM);
+                LS_Liberar(tokens);
+                continue;
+            }
+
+            if (listavacia(mem) == TRUE)
+            {
+                Dar_Error(ERR_MEMORIA_VACIA);
+                LS_Liberar(tokens);
+                continue;
+            }
+
+            mostrarExpresiones(mem);
+            LS_Liberar(tokens);
+            continue;
+        }
+
+        // ---- INGRESAR ----
+        if (cmd == CMD_INGRESAR)
+        {
+            Arbol a;
+            TipoError e = construirArbolDesdeIngreso(tokens, cant, a);
+
+            if (e != OK)
+            {
+                Dar_Error(e);
+                if (a != NULL) ARB_Liberar(a);
+                LS_Liberar(tokens);
+                continue;
+            }
+
+            // insertarExpresion debe copiar (con EXP_Crear que copia el árbol)
+            insertarExpresion(mem, a);
+
+            // liberamos el temporal (porque la lista ya guardó su copia)
+            ARB_Liberar(a);
+
+            int idx = obtenerProximoIndice(mem) - 1;
+            printf("OK. Guardada como expresion #%d\n", idx);
+
+            LS_Liberar(tokens);
+            continue;
+        }
+
+        // ---- CALCULAR ----
+        if (cmd == CMD_CALCULAR)
+        {
+            // formato: calcular <indice> <x>
+            // tokens: [0]=calcular [1]=indice [2]=x
+            if (cant != 3)
+            {
+                Dar_Error(ERR_CANT_PARAM);
+                LS_Liberar(tokens);
+                continue;
+            }
+
+            if (listavacia(mem) == TRUE)
+            {
+                Dar_Error(ERR_MEMORIA_VACIA);
+                LS_Liberar(tokens);
+                continue;
+            }
+
+            String tokIndice = LS_EnPos(tokens, 1);
+            String tokX      = LS_EnPos(tokens, 2);
+
+            if (esEntero(tokIndice) == FALSE)
+            {
+                Dar_Error(ERR_INDICE_FORMATO);
+                LS_Liberar(tokens);
+                continue;
+            }
+
+            if (esEntero(tokX) == FALSE)
+            {
+                Dar_Error(ERR_PARAMETRO);
+                LS_Liberar(tokens);
+                continue;
+            }
+
+            int indice = 0, valorX = 0;
+            sscanf(tokIndice, "%d", &indice);
+            sscanf(tokX, "%d", &valorX);
+
+            if (indice <= 0)
+            {
+                Dar_Error(ERR_INDICE_FORMATO);
+                LS_Liberar(tokens);
+                continue;
+            }
+
+            if (existeIndice(mem, indice) == FALSE)
+            {
+                Dar_Error(ERR_INDICE_NOEXISTE);
+                LS_Liberar(tokens);
+                continue;
+            }
+
+            Arbol expr = obtenerExpresion(mem, indice);
+
+            int resultado = 0;
+            TipoError e = ARB_Evaluar(expr, valorX, resultado);
+
+            if (e == OK)
+                printf("Resultado expr #%d con x=%d: %d\n", indice, valorX, resultado);
+            else
+                Dar_Error(e);
+
+            LS_Liberar(tokens);
+            continue;
+        }
+
+        // ---- INVALIDO ----
+        printf("Comando invalido.\n");
+        LS_Liberar(tokens);
+    }
+
+    liberarLista(mem);
+    strdestruir(linea);
+
     printf("Fin.\n");
     return 0;
 }

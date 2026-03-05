@@ -118,7 +118,11 @@
 
 1771985941 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\expresion.cpp
 
-1771985941 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\listaexpresiones.cpp
+1772644135 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\listaexpresiones.cpp
+	<cstdio>
+	"ListaExpresiones.h"
+	"Expresion.h"
+	"Arbol.h"
 
 1771986697 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\listastring.cpp
 	"ListaString.h"
@@ -129,18 +133,21 @@
 
 1771985942 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\programa.cpp
 
-1771985942 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\string.cpp
+1772546522 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\string.cpp
 	"String.h"
 
-1771985942 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\termino.cpp
+1772130975 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\termino.cpp
 	"Termino.h"
 
-1771985942 c:\users\pablo\documents\github\ude\taller 1\taller_1\termino.h
+1772129920 c:\users\pablo\documents\github\ude\taller 1\taller_1\termino.h
 	"TipoTermino.h"
 
-1771985942 c:\users\pablo\documents\github\ude\taller 1\taller_1\tipotermino.h
+1772128086 c:\users\pablo\documents\github\ude\taller 1\taller_1\tipotermino.h
+	"Booleano.h"
+	"TipoError.h"
 
-1771985942 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\tipoerror.cpp
+1772546522 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\tipoerror.cpp
+	"TipoError.h"
 
 1771985942 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\tipotermino.cpp
 
@@ -172,4 +179,49 @@
 
 1771286523 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\arbol.h
 	"Termino.h"
+
+1772546522 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\arbol.cpp
+	<cstdio>
+	"Arbol.h"
+	"TipoTermino.h"
+	"Booleano.h"
+
+1771985941 c:\users\pablo\documents\github\ude\taller 1\taller_1\arbol.h
+	"Termino.h"
+
+1772546522 c:\users\pablo\documents\github\ude\taller 1\taller_1\tipoerror.h
+	"String.h"
+
+1772558265 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\comando.cpp
+	<string.h>
+	"comando.h"
+
+1772558265 c:\users\pablo\documents\github\ude\taller 1\taller_1\comando.h
+
+1772644345 c:\users\pablo\documents\github\ude\taller 1\taller_1\listaexpresiones.h
+	"Booleano.h"
+	"Arbol.h"
+	"Expresion.h"
+
+1772644518 c:\users\pablo\documents\github\ude\taller 1\taller_1\expresion.h
+	"Arbol.h"
+	"Booleano.h"
+
+1772546522 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\main.cpp
+	"ListaString.h"
+	"String.h"
+	<stdio.h>
+	"String.h"
+	"ListaString.h"
+	"TipoError.h"
+	"Termino.h"
+	"TipoTermino.h"
+	<stdio.h>
+	"Booleano.h"
+	"String.h"
+	"ListaString.h"
+	"TipoError.h"
+	"Arbol.h"
+	"Termino.h"
+	"TipoTermino.h"
 

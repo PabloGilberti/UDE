@@ -37,6 +37,8 @@
 		<Unit filename="Archivo.cpp" />
 		<Unit filename="Archivo.h" />
 		<Unit filename="Booleano.h" />
+		<Unit filename="Comando.cpp" />
+		<Unit filename="Comando.h" />
 		<Unit filename="Expresion.cpp" />
 		<Unit filename="Expresion.h" />
 		<Unit filename="ListaExpresiones.cpp" />

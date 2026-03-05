@@ -1,7 +1,7 @@
 #ifndef EXPRESION_H_INCLUDED
 #define EXPRESION_H_INCLUDED
 #include "Arbol.h"
-
+#include "Booleano.h"
 typedef struct {int indice;
                 Arbol terminos;
                 }Expresion;
@@ -21,7 +21,7 @@ void EXP_Mostrar(Expresion e);
 TipoError EXP_Evaluar(Expresion e, int valorX, int &resultado);
 
 // Comparar igualdad sintáctica
-booleano EXP_Iguales(Expresion e1, Expresion e2);
+Boolean EXP_Iguales(Expresion e1, Expresion e2);
 
 TipoError EXP_Compuesta( Expresion e1, char operador, Expresion e2, int nuevoIndice, Expresion &resultado);
 

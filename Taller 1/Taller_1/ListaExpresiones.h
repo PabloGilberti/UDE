@@ -1,16 +1,17 @@
 #ifndef LISTAEXPRESIONES_H_INCLUDED
 #define LISTAEXPRESIONES_H_INCLUDED
 #include "Booleano.h"
-
+#include "Arbol.h"
+#include "Expresion.h"
 typedef struct NodoLis{ Expresion info;
-                        NodoLis *& sig;
+                        NodoLis * sig;
                         }nodoL;
 
 typedef nodoL * ListaExpresiones;
 
 void crearLista(ListaExpresiones &l);
 
-boolean listavacia(ListaExpresiones l);
+Boolean listavacia(ListaExpresiones l);
 
 void insertarExpresion(ListaExpresiones &l, Arbol a);
 
