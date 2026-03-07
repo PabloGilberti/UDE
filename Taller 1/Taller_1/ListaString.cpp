@@ -34,22 +34,29 @@ int    LS_Cantidad(ListaString L){
 };
 
 //leer lo ue viene en la posicion
-String LS_EnPos(ListaString L, int pos){
+String LS_EnPos(ListaString L, int pos)
+{
+    if (pos <= 0)
+        return NULL;
 
     int cant = LS_Cantidad(L);
-    int i=1;
-    NodoS * aux = L;
-    if (pos>cant ){
-         return NULL;
+    if (pos > cant)
+        return NULL;
 
-    }else{
-        while( i <= pos){
+    int i = 1;
+    NodoS* aux = L;
+
+    while (aux != NULL && i < pos)
+    {
         aux = aux->sig;
         i++;
-        }
-        return aux->palabra;
     }
-};
+
+    if (aux == NULL)
+        return NULL;
+
+    return aux->palabra;
+}
 
 void   LS_AgregarFinal(ListaString &L, String s){ // copia dinámica
  // Crear nodo nuevo

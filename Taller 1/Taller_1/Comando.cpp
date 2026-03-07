@@ -1,28 +1,43 @@
 #include <string.h>
 #include "Comando.h"
 
-static char lowerChar(char c) {
-    if (c >= 'A' && c <= 'Z') return c + ('a' - 'A');
+char aMinuscula(char c)
+{
+    if (c >= 'A' && c <= 'Z')
+        return c + ('a' - 'A');
     return c;
 }
 
-static int equalsIgnoreCase(char* a, const char* b) {
+int igualesSinCase(String s, String lit)
+{
     int i = 0;
-    while (a[i] != '\0' && b[i] != '\0') {
-        if (lowerChar(a[i]) != lowerChar(b[i])) return 0;
+
+    while (s[i] != '\0' && lit[i] != '\0')
+    {
+        if (aMinuscula(s[i]) != aMinuscula(lit[i]))
+            return 0;
         i++;
     }
-    return (a[i] == '\0' && b[i] == '\0') ? 1 : 0;
+
+    if (s[i] == '\0' && lit[i] == '\0')
+        return 1;
+
+    return 0;
 }
 
-TipoComando reconocerComando(char* palabra)
+TipoComando reconocerComando(String palabra)
 {
-    if (palabra == 0) return CMD_INVALIDO;
+    if (palabra == NULL)
+        return CMD_INVALIDO;
 
-    if (equalsIgnoreCase(palabra, "ingresar")) return CMD_INGRESAR;
-    if (equalsIgnoreCase(palabra, "calcular")) return CMD_CALCULAR;
-    if (equalsIgnoreCase(palabra, "mostrar"))  return CMD_MOSTRAR;
-    if (equalsIgnoreCase(palabra, "salir"))    return CMD_SALIR;
+    if (igualesSinCase(palabra, "simple"))     return CMD_SIMPLE;
+    if (igualesSinCase(palabra, "compuesta"))  return CMD_COMPUESTA;
+    if (igualesSinCase(palabra, "calcular"))   return CMD_CALCULAR;
+    if (igualesSinCase(palabra, "iguales"))    return CMD_IGUALES;
+    if (igualesSinCase(palabra, "mostrar"))    return CMD_MOSTRAR;
+    if (igualesSinCase(palabra, "guardar"))    return CMD_GUARDAR;
+    if (igualesSinCase(palabra, "recuperar"))  return CMD_RECUPERAR;
+    if (igualesSinCase(palabra, "salir"))      return CMD_SALIR;
 
     return CMD_INVALIDO;
 }

@@ -64,11 +64,11 @@ Boolean  ARB_Iguales(Arbol a, Arbol b);
 
 // Guarda el árbol en un archivo (serialización).
 // - Debe devolver ERR_ARCHIVO_EXISTE si ya existe (si esa es tu regla).
-TipoError ARB_GuardarEnArchivo(Arbol a, const char* nombreArchivo);
+TipoError ARB_GuardarEnArchivo(Arbol a, String nombreArchivo);
 
 // Carga un árbol desde un archivo (deserialización).
 // - Debe devolver ERR_ARCHIVO_NO_EXISTE si no existe.
-TipoError ARB_CargarDesdeArchivo(Arbol& a, const char* nombreArchivo);
+TipoError ARB_CargarDesdeArchivo(Arbol& a, String nombreArchivo);
 
 //evaluar arbol(calcular expresion del arbol)puede  devolver un double float
 

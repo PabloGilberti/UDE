@@ -1,8 +1,30 @@
 # depslib dependency file v1.0
-1772149967 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\main.cpp
-	<stdio.h>
+1772670109 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\main.cpp
 	"ListaString.h"
 	"String.h"
+	<stdio.h>
+	"String.h"
+	"ListaString.h"
+	"TipoError.h"
+	"Termino.h"
+	"TipoTermino.h"
+	<stdio.h>
+	"Booleano.h"
+	"String.h"
+	"ListaString.h"
+	"TipoError.h"
+	"Arbol.h"
+	"Termino.h"
+	"TipoTermino.h"
+	<cstdio>
+	"Comando.h"
+	"TipoError.h"
+	"String.h"
+	"ListaString.h"
+	"TipoTermino.h"
+	"Termino.h"
+	"Arbol.h"
+	"ListaExpresiones.h"
 
 1772145067 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\string.cpp
 	"String.h"
@@ -41,9 +63,18 @@
 
 1770854047 c:\users\usuario\documents\github\ude\taller 1\taller_1\tipotermino.h
 
-1771286523 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\expresion.cpp
+1772838835 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\expresion.cpp
+	<cstdio>
+	"Expresion.h"
+	"Arbol.h"
+	"Booleano.h"
+	"TipoError.h"
 
-1771286523 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\listaexpresiones.cpp
+1772670109 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\listaexpresiones.cpp
+	<cstdio>
+	"ListaExpresiones.h"
+	"Expresion.h"
+	"Arbol.h"
 
 1772061950 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\listastring.cpp
 	"ListaString.h"
@@ -224,4 +255,20 @@
 	"Arbol.h"
 	"Termino.h"
 	"TipoTermino.h"
+
+1772838835 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\comando.cpp
+	<string.h>
+	"Comando.h"
+
+1772751850 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\comando.h
+	"String.h"
+
+1772670109 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\expresion.h
+	"Arbol.h"
+	"Booleano.h"
+
+1772670109 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\listaexpresiones.h
+	"Booleano.h"
+	"Arbol.h"
+	"Expresion.h"
 
