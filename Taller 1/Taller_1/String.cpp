@@ -72,3 +72,15 @@ Boolean streq(String s1, String s2){
 
     return FALSE;
 }
+
+void strcon (String &s1, String s2)
+{
+    int i = strlar(s1);
+    int j = 0;
+    while ((i < MAX - 1) && (s2[j] != '\0')){
+           s1[i] = s2[j];
+           i++;
+           j++;
+    }
+    s1[i] = '\0';
+}

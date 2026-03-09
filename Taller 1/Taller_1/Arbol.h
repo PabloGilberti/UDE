@@ -1,6 +1,7 @@
 #ifndef ARBOL_H_INCLUDED
 #define ARBOL_H_INCLUDED
 #include "Termino.h"
+#include <stdio.h>
 
 typedef struct NodoArb{ Termino info;
                         int numeroNodo;
@@ -68,8 +69,7 @@ TipoError ARB_GuardarEnArchivo(Arbol a, String nombreArchivo);
 
 // Carga un árbol desde un archivo (deserialización).
 // - Debe devolver ERR_ARCHIVO_NO_EXISTE si no existe.
-TipoError ARB_CargarDesdeArchivo(Arbol& a, String nombreArchivo);
-
+TipoError ARB_CargarDesdeArchivo(Arbol &a, String nombreArchivo);
 //evaluar arbol(calcular expresion del arbol)puede  devolver un double float
 
 //modulo archivo

@@ -1,8 +1,8 @@
 #include <cstdio>
 #include "Arbol.h"
-#include "TipoTermino.h"   // TERMINO_VALOR, TERMINO_VARIABLE, TERMINO_OPERADOR, TERMINO_PARENTESIS (ajustar si se llaman distinto)
-#include "Booleano.h"      // Boolean, TRUE/FALSE (ajustar si corresponde)
-
+#include "Termino.h"
+#include "TipoError.h"
+#include "TipoTermino.h"
 /* =========================
    Básicas
    ========================= */
@@ -249,20 +249,117 @@ Boolean ARB_Iguales(Arbol a, Arbol b)
 /* =========================
    Guardar / Cargar (stub)
    ========================= */
-
+void armarNombreArchivo(String base, String &completo)
+{
+    strcrear(completo);
+    strcop(completo, base);
+    strcon(completo, (String)".dat ");
+}
 // Estas dos dependen de tu formato de archivo (serialización).
 // Si me pasás la letra/formato, las implementamos.
+static void Bajar_Arbol_Aux(Arbol a, FILE *f)
+{
+    int marca;
+
+    if (a == NULL)
+    {
+        marca = 0;
+        fwrite(&marca, sizeof(int), 1, f);
+    }
+    else
+    {
+        marca = 1;
+        fwrite(&marca, sizeof(int), 1, f);
+
+        fwrite(&(a->info), sizeof(Termino), 1, f);
+
+        Bajar_Arbol_Aux(a->hizq, f);
+        Bajar_Arbol_Aux(a->hder, f);
+    }
+}
+
 
 TipoError ARB_GuardarEnArchivo(Arbol a, String nombreArchivo)
 {
-    (void)a;
-    (void)nombreArchivo;
-    return ERR_ARCHIVO_IO; // placeholder
+    String nomArch;
+    armarNombreArchivo(nombreArchivo, nomArch);
+
+    FILE *test = fopen(nomArch, "rb");
+
+    if (test != NULL)
+    {
+        fclose(test);
+        strdestruir(nomArch);
+        return ERR_ARCHIVO_EXISTE;
+    }
+
+    FILE *f = fopen(nomArch, "wb");
+
+    if (f == NULL)
+    {
+        strdestruir(nomArch);
+        return ERR_ARCHIVO_IO;
+    }
+
+    Bajar_Arbol_Aux(a, f);
+
+    fclose(f);
+    strdestruir(nomArch);
+
+    return OK;
+}
+static Arbol Levantar_Arbol_Aux(FILE *f, TipoError &err)
+{
+    int marca;
+
+    if (fread(&marca, sizeof(int), 1, f) != 1)
+    {
+        err = ERR_ARCHIVO_IO;
+        return NULL;
+    }
+
+    if (marca == 0)
+        return NULL;
+
+    Termino t;
+
+    if (fread(&t, sizeof(Termino), 1, f) != 1)
+    {
+        err = ERR_ARCHIVO_IO;
+        return NULL;
+    }
+
+    Arbol izq = Levantar_Arbol_Aux(f, err);
+    if (err != OK) return NULL;
+
+    Arbol der = Levantar_Arbol_Aux(f, err);
+    if (err != OK) return NULL;
+
+    return ARB_CrearNodo(t, izq, der);
 }
 
-TipoError ARB_CargarDesdeArchivo(Arbol& a, String nombreArchivo)
+TipoError ARB_CargarDesdeArchivo(Arbol &a, String nombreArchivo)
 {
-    (void)a;
-    (void)nombreArchivo;
-    return ERR_ARCHIVO_IO; // placeholder
+    String nomArch;
+    armarNombreArchivo(nombreArchivo, nomArch);
+
+    FILE *f = fopen(nomArch, "rb");
+
+    if (f == NULL)
+    {
+        strdestruir(nomArch);
+        return ERR_ARCHIVO_NOEXISTE;
+    }
+
+    ARB_Liberar(a);
+    a = NULL;
+
+    TipoError err = OK;
+
+    a = Levantar_Arbol_Aux(f, err);
+
+    fclose(f);
+    strdestruir(nomArch);
+
+    return err;
 }

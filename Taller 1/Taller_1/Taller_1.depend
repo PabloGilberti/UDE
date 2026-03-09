@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1772670109 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\main.cpp
+1772841912 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\main.cpp
 	"ListaString.h"
 	"String.h"
 	<stdio.h>
@@ -18,15 +18,15 @@
 	"TipoTermino.h"
 	<cstdio>
 	"Comando.h"
-	"TipoError.h"
 	"String.h"
 	"ListaString.h"
+	"ListaExpresiones.h"
+	"TipoError.h"
 	"TipoTermino.h"
 	"Termino.h"
 	"Arbol.h"
-	"ListaExpresiones.h"
 
-1772145067 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\string.cpp
+1772887526 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\string.cpp
 	"String.h"
 
 1771891179 source:c:\users\pablo\documents\ude\taller 1\taller_1\main.cpp
@@ -76,7 +76,7 @@
 	"Expresion.h"
 	"Arbol.h"
 
-1772061950 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\listastring.cpp
+1772841289 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\listastring.cpp
 	"ListaString.h"
 
 1771286523 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\programa.cpp
@@ -202,14 +202,16 @@
 1772484222 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\tipoerror.h
 	"String.h"
 
-1772143529 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\arbol.cpp
+1772888571 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\arbol.cpp
 	<cstdio>
 	"Arbol.h"
-	"TipoTermino.h"
-	"Booleano.h"
-
-1771286523 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\arbol.h
 	"Termino.h"
+	"TipoError.h"
+	"TipoTermino.h"
+
+1772887311 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\arbol.h
+	"Termino.h"
+	<stdio.h>
 
 1772546522 source:c:\users\pablo\documents\github\ude\taller 1\taller_1\arbol.cpp
 	<cstdio>
@@ -256,11 +258,11 @@
 	"Termino.h"
 	"TipoTermino.h"
 
-1772838835 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\comando.cpp
+1772841837 source:c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\comando.cpp
 	<string.h>
 	"Comando.h"
 
-1772751850 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\comando.h
+1772841837 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\comando.h
 	"String.h"
 
 1772670109 c:\users\pablo gilberti\documents\ude\ude\taller 1\taller_1\expresion.h
