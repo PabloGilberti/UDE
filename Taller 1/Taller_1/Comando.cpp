@@ -30,14 +30,22 @@ TipoComando reconocerComando(String palabra)
     if (palabra == NULL)
         return CMD_INVALIDO;
 
-    if (igualesSinCase(palabra, "simple"))     return CMD_SIMPLE;
-    if (igualesSinCase(palabra, "compuesta"))  return CMD_COMPUESTA;
-    if (igualesSinCase(palabra, "calcular"))   return CMD_CALCULAR;
-    if (igualesSinCase(palabra, "iguales"))    return CMD_IGUALES;
-    if (igualesSinCase(palabra, "mostrar"))    return CMD_MOSTRAR;
-    if (igualesSinCase(palabra, "guardar"))    return CMD_GUARDAR;
-    if (igualesSinCase(palabra, "recuperar"))  return CMD_RECUPERAR;
-    if (igualesSinCase(palabra, "salir"))      return CMD_SALIR;
+    if (igualesSinCase(palabra, "simple"))
+        return CMD_SIMPLE;
+    if (igualesSinCase(palabra, "compuesta"))
+        return CMD_COMPUESTA;
+    if (igualesSinCase(palabra, "calcular"))
+        return CMD_CALCULAR;
+    if (igualesSinCase(palabra, "iguales"))
+        return CMD_IGUALES;
+    if (igualesSinCase(palabra, "mostrar"))
+        return CMD_MOSTRAR;
+    if (igualesSinCase(palabra, "guardar"))
+        return CMD_GUARDAR;
+    if (igualesSinCase(palabra, "recuperar"))
+        return CMD_RECUPERAR;
+    if (igualesSinCase(palabra, "salir"))
+        return CMD_SALIR;
 
     return CMD_INVALIDO;
 }
