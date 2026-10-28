@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1792666814 source:c:\users\pgilberti\downloads\practico05\practico05\main.cpp
+	<iostream>
+
+1792667443 source:c:\users\pgilberti\downloads\practico05\practico05\string.cpp
+	<iostream>
+	"string.h"
+
+1792667298 c:\users\pgilberti\downloads\practico05\practico05\string.h
+	<cstring>
+	<iostream>
+
+1792672064 source:c:\users\pgilberti\downloads\practico05\practico05\duenio.cpp
+	"Duenio.h"
+
+1792670357 c:\users\pgilberti\downloads\practico05\practico05\duenio.h
+	"string.h"
+	"Mascota.h"
+
+1792670890 c:\users\pgilberti\downloads\practico05\practico05\mascota.h
+	"string.h"
+
+1792672399 source:c:\users\pgilberti\downloads\practico05\practico05\mascota.cpp
+	"Mascota.h"
+
+1792672064 source:c:\users\pgilberti\documents\github\ude\programacion 4\practico05\duenio.cpp
+	"Duenio.h"
+
+1792670357 c:\users\pgilberti\documents\github\ude\programacion 4\practico05\duenio.h
+	"string.h"
+	"Mascota.h"
+
+1792667298 c:\users\pgilberti\documents\github\ude\programacion 4\practico05\string.h
+	<cstring>
+	<iostream>
+
+1793187818 c:\users\pgilberti\documents\github\ude\programacion 4\practico05\mascota.h
+	"string.h"
+
+1792666814 source:c:\users\pgilberti\documents\github\ude\programacion 4\practico05\main.cpp
+	<iostream>
+
+1792672399 source:c:\users\pgilberti\documents\github\ude\programacion 4\practico05\mascota.cpp
+	"Mascota.h"
+
+1792667443 source:c:\users\pgilberti\documents\github\ude\programacion 4\practico05\string.cpp
+	<iostream>
+	"string.h"
+
