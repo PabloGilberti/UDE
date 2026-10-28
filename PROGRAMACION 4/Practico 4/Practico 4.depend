@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1791811208 source:c:\users\pablo\onedrive\documentos\github\ude\programacion 4\practico 4\fecha.cpp
+	"Fecha.h"
+
+1791462945 source:c:\users\pablo\onedrive\documentos\github\ude\programacion 4\practico 4\main.cpp
+	<iostream>
+	"Fecha.h"
+
+1791462590 c:\users\pablo\onedrive\documentos\github\ude\programacion 4\practico 4\fecha.h
+
