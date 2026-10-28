@@ -47,3 +47,33 @@
 	<iostream>
 	"string.h"
 
+1793188681 source:c:\users\pablo\onedrive\documentos\github\ude\programacion 4\practico 5\duenio.cpp
+	"Duenio.h"
+
+1793188681 c:\users\pablo\onedrive\documentos\github\ude\programacion 4\practico 5\duenio.h
+	"string.h"
+	"Mascota.h"
+
+1793188681 c:\users\pablo\onedrive\documentos\github\ude\programacion 4\practico 5\string.h
+	<cstring>
+	<iostream>
+
+1793188681 c:\users\pablo\onedrive\documentos\github\ude\programacion 4\practico 5\mascota.h
+	"string.h"
+
+1793188681 source:c:\users\pablo\onedrive\documentos\github\ude\programacion 4\practico 5\iterador.cpp
+	"Iterador.h"
+
+1793188681 c:\users\pablo\onedrive\documentos\github\ude\programacion 4\practico 5\iterador.h
+	"Duenio.h"
+
+1743445502 source:c:\users\pablo\onedrive\documentos\github\ude\programacion 4\practico 5\main.cpp
+	<iostream>
+
+1793188681 source:c:\users\pablo\onedrive\documentos\github\ude\programacion 4\practico 5\mascota.cpp
+	"Mascota.h"
+
+1793188681 source:c:\users\pablo\onedrive\documentos\github\ude\programacion 4\practico 5\string.cpp
+	<iostream>
+	"string.h"
+
